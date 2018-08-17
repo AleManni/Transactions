@@ -8,11 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		1D6FD5F0212607A5005D0ADF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD5EF212607A5005D0ADF /* AppDelegate.swift */; };
-		1D6FD5F2212607A5005D0ADF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD5F1212607A5005D0ADF /* ViewController.swift */; };
-		1D6FD5F5212607A5005D0ADF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D6FD5F3212607A5005D0ADF /* Main.storyboard */; };
 		1D6FD5F7212607A7005D0ADF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D6FD5F6212607A7005D0ADF /* Assets.xcassets */; };
 		1D6FD5FA212607A7005D0ADF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D6FD5F8212607A7005D0ADF /* LaunchScreen.storyboard */; };
 		1D6FD605212607A7005D0ADF /* BudTransactionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD604212607A7005D0ADF /* BudTransactionsTests.swift */; };
+		1D6FD61421260906005D0ADF /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD61321260906005D0ADF /* APIErrors.swift */; };
+		1D6FD61621260940005D0ADF /* RepositoryErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD61521260940005D0ADF /* RepositoryErrors.swift */; };
+		1D6FD618212609B0005D0ADF /* OperationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD617212609B0005D0ADF /* OperationResult.swift */; };
+		1D6FD61A21260B46005D0ADF /* DataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD61921260B46005D0ADF /* DataSources.swift */; };
+		1D6FD61C21260B80005D0ADF /* DomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD61B21260B80005D0ADF /* DomainModel.swift */; };
+		1D6FD61E21260BCA005D0ADF /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD61D21260BCA005D0ADF /* APIRequest.swift */; };
+		1D6FD62121260C85005D0ADF /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD62021260C85005D0ADF /* StringExtensions.swift */; };
+		1D6FD62421260D3A005D0ADF /* FontFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD62321260D3A005D0ADF /* FontFormatter.swift */; };
+		1D6FD62621260D98005D0ADF /* BudColour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD62521260D98005D0ADF /* BudColour.swift */; };
+		1D6FD62821260E22005D0ADF /* URLComponentExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD62721260E22005D0ADF /* URLComponentExtensions.swift */; };
+		1D6FD62B2126A9F3005D0ADF /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD62A2126A9F3005D0ADF /* AppService.swift */; };
+		1D6FD62D2126AA32005D0ADF /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD62C2126AA32005D0ADF /* ReachabilityService.swift */; };
+		1D6FD62F2126AA78005D0ADF /* AppCoordinatorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD62E2126AA78005D0ADF /* AppCoordinatorService.swift */; };
+		1D6FD6322126AABA005D0ADF /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD6312126AABA005D0ADF /* AppCoordinator.swift */; };
+		1D6FD6342126AAC2005D0ADF /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD6332126AAC1005D0ADF /* NavigationService.swift */; };
+		1D6FD6362126AACC005D0ADF /* ModulesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD6352126AACC005D0ADF /* ModulesFactory.swift */; };
+		1D6FD6382126AD53005D0ADF /* AppearanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD6372126AD53005D0ADF /* AppearanceService.swift */; };
+		1D6FD63A2126AE09005D0ADF /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD6392126AE09005D0ADF /* RealmService.swift */; };
+		1D6FD63C2126AE29005D0ADF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD63B2126AE29005D0ADF /* NetworkService.swift */; };
+		1D6FD6412126AFEF005D0ADF /* APIInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD6402126AFEF005D0ADF /* APIInterface.swift */; };
+		1D6FD6442126B1F8005D0ADF /* DefaultNetworkConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD6432126B1F8005D0ADF /* DefaultNetworkConfigurator.swift */; };
+		1D6FD6462126B3DD005D0ADF /* NetworkInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD6452126B3DD005D0ADF /* NetworkInterfaces.swift */; };
+		1D6FD6482126B46E005D0ADF /* NetworkServiceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD6472126B46E005D0ADF /* NetworkServiceExtension.swift */; };
+		1D7C388A2126B5B900B8B3C6 /* DefaultNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C38892126B5B900B8B3C6 /* DefaultNetworkClient.swift */; };
+		1DAAA0DA212727480043AC86 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAAA0D9212727480043AC86 /* NetworkResult.swift */; };
+		1DAAA0DC212728170043AC86 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAAA0DB212728170043AC86 /* NetworkErrors.swift */; };
+		1DAAA0DE212728A60043AC86 /* DebugLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAAA0DD212728A60043AC86 /* DebugLog.swift */; };
+		1DAAA0E121272D470043AC86 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAAA0E021272D470043AC86 /* RealmManager.swift */; };
+		1DAAA0E321272D7B0043AC86 /* DatabaseMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAAA0E221272D7B0043AC86 /* DatabaseMigration.swift */; };
+		1E6376B1A4031F2A6727A259 /* Pods_BudTransactionsCommonPods_BudTransactionsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EF1634A48DB6636ED018CF5 /* Pods_BudTransactionsCommonPods_BudTransactionsTests.framework */; };
+		83B77E3D11C5808B07638A37 /* Pods_BudTransactionsCommonPods_BudTransactions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C6D981168DE175FDEC157C /* Pods_BudTransactionsCommonPods_BudTransactions.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +55,49 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19C6D981168DE175FDEC157C /* Pods_BudTransactionsCommonPods_BudTransactions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BudTransactionsCommonPods_BudTransactions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D6FD5EC212607A5005D0ADF /* BudTransactions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudTransactions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D6FD5EF212607A5005D0ADF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1D6FD5F1212607A5005D0ADF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1D6FD5F4212607A5005D0ADF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1D6FD5F6212607A7005D0ADF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D6FD5F9212607A7005D0ADF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D6FD5FB212607A7005D0ADF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D6FD600212607A7005D0ADF /* BudTransactionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BudTransactionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D6FD604212607A7005D0ADF /* BudTransactionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudTransactionsTests.swift; sourceTree = "<group>"; };
 		1D6FD606212607A7005D0ADF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D6FD61321260906005D0ADF /* APIErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrors.swift; sourceTree = "<group>"; };
+		1D6FD61521260940005D0ADF /* RepositoryErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryErrors.swift; sourceTree = "<group>"; };
+		1D6FD617212609B0005D0ADF /* OperationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationResult.swift; sourceTree = "<group>"; };
+		1D6FD61921260B46005D0ADF /* DataSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSources.swift; sourceTree = "<group>"; };
+		1D6FD61B21260B80005D0ADF /* DomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainModel.swift; sourceTree = "<group>"; };
+		1D6FD61D21260BCA005D0ADF /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		1D6FD62021260C85005D0ADF /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		1D6FD62321260D3A005D0ADF /* FontFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFormatter.swift; sourceTree = "<group>"; };
+		1D6FD62521260D98005D0ADF /* BudColour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudColour.swift; sourceTree = "<group>"; };
+		1D6FD62721260E22005D0ADF /* URLComponentExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentExtensions.swift; sourceTree = "<group>"; };
+		1D6FD62A2126A9F3005D0ADF /* AppService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
+		1D6FD62C2126AA32005D0ADF /* ReachabilityService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
+		1D6FD62E2126AA78005D0ADF /* AppCoordinatorService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinatorService.swift; sourceTree = "<group>"; };
+		1D6FD6312126AABA005D0ADF /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		1D6FD6332126AAC1005D0ADF /* NavigationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
+		1D6FD6352126AACC005D0ADF /* ModulesFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModulesFactory.swift; sourceTree = "<group>"; };
+		1D6FD6372126AD53005D0ADF /* AppearanceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceService.swift; sourceTree = "<group>"; };
+		1D6FD6392126AE09005D0ADF /* RealmService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		1D6FD63B2126AE29005D0ADF /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		1D6FD6402126AFEF005D0ADF /* APIInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIInterface.swift; sourceTree = "<group>"; };
+		1D6FD6432126B1F8005D0ADF /* DefaultNetworkConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultNetworkConfigurator.swift; sourceTree = "<group>"; };
+		1D6FD6452126B3DD005D0ADF /* NetworkInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInterfaces.swift; sourceTree = "<group>"; };
+		1D6FD6472126B46E005D0ADF /* NetworkServiceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceExtension.swift; sourceTree = "<group>"; };
+		1D7C38892126B5B900B8B3C6 /* DefaultNetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultNetworkClient.swift; sourceTree = "<group>"; };
+		1DAAA0D9212727480043AC86 /* NetworkResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		1DAAA0DB212728170043AC86 /* NetworkErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		1DAAA0DD212728A60043AC86 /* DebugLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLog.swift; sourceTree = "<group>"; };
+		1DAAA0E021272D470043AC86 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		1DAAA0E221272D7B0043AC86 /* DatabaseMigration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseMigration.swift; sourceTree = "<group>"; };
+		231EB9AE9B66B2BD33101023 /* Pods-BudTransactionsCommonPods-BudTransactionsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudTransactionsCommonPods-BudTransactionsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactionsTests/Pods-BudTransactionsCommonPods-BudTransactionsTests.release.xcconfig"; sourceTree = "<group>"; };
+		6EF1634A48DB6636ED018CF5 /* Pods_BudTransactionsCommonPods_BudTransactionsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BudTransactionsCommonPods_BudTransactionsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81F42DBFA8F313E0D1133648 /* Pods-BudTransactionsCommonPods-BudTransactions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudTransactionsCommonPods-BudTransactions.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactions/Pods-BudTransactionsCommonPods-BudTransactions.debug.xcconfig"; sourceTree = "<group>"; };
+		8817D4C5F46DE4E929A088F0 /* Pods-BudTransactionsCommonPods-BudTransactionsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudTransactionsCommonPods-BudTransactionsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactionsTests/Pods-BudTransactionsCommonPods-BudTransactionsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B8A3290587A92BF870136FFE /* Pods-BudTransactionsCommonPods-BudTransactions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudTransactionsCommonPods-BudTransactions.release.xcconfig"; path = "Pods/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactions/Pods-BudTransactionsCommonPods-BudTransactions.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B77E3D11C5808B07638A37 /* Pods_BudTransactionsCommonPods_BudTransactions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E6376B1A4031F2A6727A259 /* Pods_BudTransactionsCommonPods_BudTransactionsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +126,8 @@
 				1D6FD5EE212607A5005D0ADF /* BudTransactions */,
 				1D6FD603212607A7005D0ADF /* BudTransactionsTests */,
 				1D6FD5ED212607A5005D0ADF /* Products */,
+				1FFA4BCE43852DB415CD9848 /* Pods */,
+				87AB67BD1A3D32667BB98876 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +143,9 @@
 		1D6FD5EE212607A5005D0ADF /* BudTransactions */ = {
 			isa = PBXGroup;
 			children = (
+				1D6FD6292126A96C005D0ADF /* AppServices */,
+				1D6FD60F21260802005D0ADF /* Shared */,
 				1D6FD5EF212607A5005D0ADF /* AppDelegate.swift */,
-				1D6FD5F1212607A5005D0ADF /* ViewController.swift */,
-				1D6FD5F3212607A5005D0ADF /* Main.storyboard */,
 				1D6FD5F6212607A7005D0ADF /* Assets.xcassets */,
 				1D6FD5F8212607A7005D0ADF /* LaunchScreen.storyboard */,
 				1D6FD5FB212607A7005D0ADF /* Info.plist */,
@@ -96,6 +162,141 @@
 			path = BudTransactionsTests;
 			sourceTree = "<group>";
 		};
+		1D6FD60F21260802005D0ADF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				1D6FD63D2126AFB4005D0ADF /* DataSources */,
+				1D6FD62221260D1C005D0ADF /* Utilities */,
+				1D6FD61F21260C52005D0ADF /* Extensions */,
+				1D6FD61021260807005D0ADF /* Errors */,
+				1D6FD617212609B0005D0ADF /* OperationResult.swift */,
+				1DAAA0D9212727480043AC86 /* NetworkResult.swift */,
+				1DAAA0DB212728170043AC86 /* NetworkErrors.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		1D6FD61021260807005D0ADF /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				1D6FD61321260906005D0ADF /* APIErrors.swift */,
+				1D6FD61521260940005D0ADF /* RepositoryErrors.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		1D6FD61F21260C52005D0ADF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1D6FD62021260C85005D0ADF /* StringExtensions.swift */,
+				1D6FD62721260E22005D0ADF /* URLComponentExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1D6FD62221260D1C005D0ADF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1D6FD62321260D3A005D0ADF /* FontFormatter.swift */,
+				1D6FD62521260D98005D0ADF /* BudColour.swift */,
+				1DAAA0DD212728A60043AC86 /* DebugLog.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1D6FD6292126A96C005D0ADF /* AppServices */ = {
+			isa = PBXGroup;
+			children = (
+				1DAAA0DF21272D0B0043AC86 /* DataBase */,
+				1D6FD6422126B1C5005D0ADF /* Network */,
+				1D6FD6302126AAAD005D0ADF /* Navigation */,
+				1D6FD62A2126A9F3005D0ADF /* AppService.swift */,
+				1D6FD62C2126AA32005D0ADF /* ReachabilityService.swift */,
+				1D6FD62E2126AA78005D0ADF /* AppCoordinatorService.swift */,
+				1D6FD6372126AD53005D0ADF /* AppearanceService.swift */,
+				1D6FD6392126AE09005D0ADF /* RealmService.swift */,
+				1D6FD6472126B46E005D0ADF /* NetworkServiceExtension.swift */,
+			);
+			path = AppServices;
+			sourceTree = "<group>";
+		};
+		1D6FD6302126AAAD005D0ADF /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				1D6FD6312126AABA005D0ADF /* AppCoordinator.swift */,
+				1D6FD6352126AACC005D0ADF /* ModulesFactory.swift */,
+				1D6FD6332126AAC1005D0ADF /* NavigationService.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		1D6FD63D2126AFB4005D0ADF /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				1D6FD61B21260B80005D0ADF /* DomainModel.swift */,
+				1D6FD61921260B46005D0ADF /* DataSources.swift */,
+				1D6FD63F2126AFCA005D0ADF /* DataBase */,
+				1D6FD63E2126AFC4005D0ADF /* API */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		1D6FD63E2126AFC4005D0ADF /* API */ = {
+			isa = PBXGroup;
+			children = (
+				1D6FD6402126AFEF005D0ADF /* APIInterface.swift */,
+				1D6FD61D21260BCA005D0ADF /* APIRequest.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		1D6FD63F2126AFCA005D0ADF /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		1D6FD6422126B1C5005D0ADF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1D6FD6452126B3DD005D0ADF /* NetworkInterfaces.swift */,
+				1D6FD6432126B1F8005D0ADF /* DefaultNetworkConfigurator.swift */,
+				1D7C38892126B5B900B8B3C6 /* DefaultNetworkClient.swift */,
+				1D6FD63B2126AE29005D0ADF /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1DAAA0DF21272D0B0043AC86 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				1DAAA0E021272D470043AC86 /* RealmManager.swift */,
+				1DAAA0E221272D7B0043AC86 /* DatabaseMigration.swift */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		1FFA4BCE43852DB415CD9848 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81F42DBFA8F313E0D1133648 /* Pods-BudTransactionsCommonPods-BudTransactions.debug.xcconfig */,
+				B8A3290587A92BF870136FFE /* Pods-BudTransactionsCommonPods-BudTransactions.release.xcconfig */,
+				8817D4C5F46DE4E929A088F0 /* Pods-BudTransactionsCommonPods-BudTransactionsTests.debug.xcconfig */,
+				231EB9AE9B66B2BD33101023 /* Pods-BudTransactionsCommonPods-BudTransactionsTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		87AB67BD1A3D32667BB98876 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19C6D981168DE175FDEC157C /* Pods_BudTransactionsCommonPods_BudTransactions.framework */,
+				6EF1634A48DB6636ED018CF5 /* Pods_BudTransactionsCommonPods_BudTransactionsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +304,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D6FD609212607A7005D0ADF /* Build configuration list for PBXNativeTarget "BudTransactions" */;
 			buildPhases = (
+				3EE91781FEB64F07D0BEC383 /* [CP] Check Pods Manifest.lock */,
 				1D6FD5E8212607A5005D0ADF /* Sources */,
 				1D6FD5E9212607A5005D0ADF /* Frameworks */,
 				1D6FD5EA212607A5005D0ADF /* Resources */,
+				E77DD3F7ADBCFF4188A0CCF6 /* [CP] Embed Pods Frameworks */,
+				75F80685C819DECB3562F750 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +324,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D6FD60C212607A7005D0ADF /* Build configuration list for PBXNativeTarget "BudTransactionsTests" */;
 			buildPhases = (
+				99875FE38CD766E53DECCD56 /* [CP] Check Pods Manifest.lock */,
 				1D6FD5FC212607A7005D0ADF /* Sources */,
 				1D6FD5FD212607A7005D0ADF /* Frameworks */,
 				1D6FD5FE212607A7005D0ADF /* Resources */,
+				9BE99ED324048B6A818360EC /* [CP] Embed Pods Frameworks */,
+				EBFC217E43A826160C94725D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,7 +386,6 @@
 			files = (
 				1D6FD5FA212607A7005D0ADF /* LaunchScreen.storyboard in Resources */,
 				1D6FD5F7212607A7005D0ADF /* Assets.xcassets in Resources */,
-				1D6FD5F5212607A5005D0ADF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,13 +398,154 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3EE91781FEB64F07D0BEC383 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BudTransactionsCommonPods-BudTransactions-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75F80685C819DECB3562F750 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactions/Pods-BudTransactionsCommonPods-BudTransactions-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99875FE38CD766E53DECCD56 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BudTransactionsCommonPods-BudTransactionsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BE99ED324048B6A818360EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactionsTests/Pods-BudTransactionsCommonPods-BudTransactionsTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactionsTests/Pods-BudTransactionsCommonPods-BudTransactionsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E77DD3F7ADBCFF4188A0CCF6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactions/Pods-BudTransactionsCommonPods-BudTransactions-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactions/Pods-BudTransactionsCommonPods-BudTransactions-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBFC217E43A826160C94725D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactionsTests/Pods-BudTransactionsCommonPods-BudTransactionsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1D6FD5E8212607A5005D0ADF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D6FD5F2212607A5005D0ADF /* ViewController.swift in Sources */,
+				1D6FD61C21260B80005D0ADF /* DomainModel.swift in Sources */,
+				1D6FD6382126AD53005D0ADF /* AppearanceService.swift in Sources */,
+				1DAAA0DE212728A60043AC86 /* DebugLog.swift in Sources */,
+				1D6FD62B2126A9F3005D0ADF /* AppService.swift in Sources */,
+				1D6FD618212609B0005D0ADF /* OperationResult.swift in Sources */,
+				1D6FD6342126AAC2005D0ADF /* NavigationService.swift in Sources */,
+				1D6FD6442126B1F8005D0ADF /* DefaultNetworkConfigurator.swift in Sources */,
+				1D7C388A2126B5B900B8B3C6 /* DefaultNetworkClient.swift in Sources */,
+				1D6FD62121260C85005D0ADF /* StringExtensions.swift in Sources */,
+				1D6FD62F2126AA78005D0ADF /* AppCoordinatorService.swift in Sources */,
 				1D6FD5F0212607A5005D0ADF /* AppDelegate.swift in Sources */,
+				1D6FD62821260E22005D0ADF /* URLComponentExtensions.swift in Sources */,
+				1D6FD6482126B46E005D0ADF /* NetworkServiceExtension.swift in Sources */,
+				1D6FD61621260940005D0ADF /* RepositoryErrors.swift in Sources */,
+				1DAAA0E121272D470043AC86 /* RealmManager.swift in Sources */,
+				1D6FD63C2126AE29005D0ADF /* NetworkService.swift in Sources */,
+				1D6FD61A21260B46005D0ADF /* DataSources.swift in Sources */,
+				1D6FD6362126AACC005D0ADF /* ModulesFactory.swift in Sources */,
+				1D6FD6462126B3DD005D0ADF /* NetworkInterfaces.swift in Sources */,
+				1DAAA0DC212728170043AC86 /* NetworkErrors.swift in Sources */,
+				1D6FD6412126AFEF005D0ADF /* APIInterface.swift in Sources */,
+				1DAAA0E321272D7B0043AC86 /* DatabaseMigration.swift in Sources */,
+				1D6FD62421260D3A005D0ADF /* FontFormatter.swift in Sources */,
+				1DAAA0DA212727480043AC86 /* NetworkResult.swift in Sources */,
+				1D6FD62D2126AA32005D0ADF /* ReachabilityService.swift in Sources */,
+				1D6FD63A2126AE09005D0ADF /* RealmService.swift in Sources */,
+				1D6FD61E21260BCA005D0ADF /* APIRequest.swift in Sources */,
+				1D6FD6322126AABA005D0ADF /* AppCoordinator.swift in Sources */,
+				1D6FD61421260906005D0ADF /* APIErrors.swift in Sources */,
+				1D6FD62621260D98005D0ADF /* BudColour.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,14 +568,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1D6FD5F3212607A5005D0ADF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1D6FD5F4212607A5005D0ADF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1D6FD5F8212607A7005D0ADF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -356,8 +695,10 @@
 		};
 		1D6FD60A212607A7005D0ADF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81F42DBFA8F313E0D1133648 /* Pods-BudTransactionsCommonPods-BudTransactions.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DY95X747ZU;
 				INFOPLIST_FILE = BudTransactions/Info.plist;
@@ -367,6 +708,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "info-alessandromanni.com.BudTransactions";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -374,8 +716,10 @@
 		};
 		1D6FD60B212607A7005D0ADF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8A3290587A92BF870136FFE /* Pods-BudTransactionsCommonPods-BudTransactions.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DY95X747ZU;
 				INFOPLIST_FILE = BudTransactions/Info.plist;
@@ -385,6 +729,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "info-alessandromanni.com.BudTransactions";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -392,6 +737,7 @@
 		};
 		1D6FD60D212607A7005D0ADF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8817D4C5F46DE4E929A088F0 /* Pods-BudTransactionsCommonPods-BudTransactionsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -413,6 +759,7 @@
 		};
 		1D6FD60E212607A7005D0ADF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 231EB9AE9B66B2BD33101023 /* Pods-BudTransactionsCommonPods-BudTransactionsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

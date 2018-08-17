@@ -1,0 +1,6 @@
+framework module Pods_BudTransactionsCommonPods_BudTransactions {
+  umbrella header "Pods-BudTransactionsCommonPods-BudTransactions-umbrella.h"
+
+  export *
+  module * { export * }
+}
