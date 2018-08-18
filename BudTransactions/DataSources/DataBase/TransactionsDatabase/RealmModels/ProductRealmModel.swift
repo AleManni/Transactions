@@ -28,9 +28,12 @@ final class ProductRealmModel: Object {
 
 extension ProductRealmModel: DatabaseModel {
   convenience init?(domainModel: DomainModel) {
-    guard let model = domainModel as? TransactionDomainModel else {
+    guard let model = domainModel as? ProductDomainModel else {
       return nil
     }
     self.init()
+    self.id = model.id
+    self.name = model.name
+    self.iconURLString = model.iconURLString
   }
 }

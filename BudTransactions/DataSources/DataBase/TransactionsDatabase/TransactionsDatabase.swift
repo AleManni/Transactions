@@ -9,34 +9,51 @@
 import Foundation
 
 import RealmSwift
-/*
+
 final class TransactionsDatabase: MainDatabase {
+
+  private let writeSerialQueue = DispatchQueue(label: "Realm writing queue")
+
   func save(transaction: DomainModel) {
-    guard let object = RecentSearch(domainModel: recentSearch) else {
+    guard let model = transaction as? TransactionDomainModel,
+    let transactionObject = TransactionRealmModel(domainModel: model),
+    let productObject = ProductRealmModel(domainModel: model.product) else {
       return
     }
-    write(object, shouldUpdateIfExists: true)
-  }
-
-  func getRecentSearches(sortDefinition: RealmSortDefinition? = nil, limit: Int = 0) -> [RecentSearchDomainModel] {
-    let dbModels = objects(ofType: RecentSearch.self, sortDefinition: sortDefinition)
-    let safeLimit = min(limit, dbModels.count)
-
-    return dbModels[0..<safeLimit].compactMap { buildRecentSearchDomainModel(databaseModel: $0) }
-  }
-
-  func deleteAllRecentSearches() {
-    do {
-      let realm = try Realm()
-      let objects = realm.objects(RecentSearch.self)
-
-      try realm.write {
-        realm.delete(objects)
-      }
-    } catch let exception {
-      CSDebug("[RecentSearchMainDatabase] Failed to delete with exception: \(exception.localizedDescription)")
+    writeSerialQueue.async { [weak self] in
+    self?.write(transactionObject, shouldUpdateIfExists: true)
+    self?.write(productObject, shouldUpdateIfExists: true)
     }
   }
+
+  func getTransactions() -> [TransactionDomainModel] {
+    let transactions = objects(ofType: TransactionRealmModel.self)
+    let models: [TransactionDomainModel] = transactions.compactMap {
+      guard let realmProduct = object(ofType: ProductRealmModel.self, primaryKey: $0.productId) else {
+        return nil
+      }
+      return TransactionDomainModel(transactionDBModel: $0, productDBModel: realmProduct)
+    }
+    return models
+  }
 }
- */
+
+extension TransactionDomainModel {
+  init?(transactionDBModel: TransactionRealmModel, productDBModel: ProductRealmModel) {
+    guard let category = TransactionCategory(rawValue: transactionDBModel.categoryID),
+      let currency = Currency(rawValue: transactionDBModel.currency) else {
+      return nil
+    }
+    self.id = transactionDBModel.id
+    self.date = transactionDBModel.date
+    self.category = category
+    self.currency = currency
+    self.description = transactionDBModel.descriptionString
+    self.amount = transactionDBModel.amount
+    self.product = ProductDomainModel(id: productDBModel.id,
+                                      name: productDBModel.name,
+                                      iconURLString: productDBModel.iconURLString)
+  }
+}
+
 

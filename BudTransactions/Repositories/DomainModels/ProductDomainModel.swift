@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ProductDomainModel {
+struct ProductDomainModel: DomainModel {
   let id: Int
   let name: String
   let iconURLString: String

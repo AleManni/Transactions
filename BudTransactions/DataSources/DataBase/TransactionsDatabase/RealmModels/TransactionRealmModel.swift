@@ -47,5 +47,12 @@ extension TransactionRealmModel: DatabaseModel {
       return nil
     }
     self.init()
+    self.id = model.id
+    self.date = model.date
+    self.descriptionString = model.description
+    self.categoryID = model.category.rawValue
+    self.currency = model.currency.rawValue
+    self.amount = model.amount
+    self.productId = model.product.id
   }
 }
