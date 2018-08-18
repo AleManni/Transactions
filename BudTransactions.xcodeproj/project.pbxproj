@@ -56,6 +56,10 @@
 		1DF04C042128735E0095A931 /* transactions_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DF04C032128735E0095A931 /* transactions_list.json */; };
 		1DF04C06212879790095A931 /* APIMockNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF04C05212879790095A931 /* APIMockNetworkClient.swift */; };
 		1DF04C082128834B0095A931 /* TransactionListNetworkModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF04C072128834B0095A931 /* TransactionListNetworkModelTests.swift */; };
+		1DF04C0A212888890095A931 /* MainDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF04C09212888890095A931 /* MainDatabase.swift */; };
+		1DF04C0D21288A450095A931 /* ProductRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF04C0C21288A450095A931 /* ProductRealmModel.swift */; };
+		1DF04C0F21288B270095A931 /* TransactionRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF04C0E21288B270095A931 /* TransactionRealmModel.swift */; };
+		1DF04C1221288D450095A931 /* TransactionsDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF04C1121288D450095A931 /* TransactionsDatabase.swift */; };
 		1E6376B1A4031F2A6727A259 /* Pods_BudTransactionsCommonPods_BudTransactionsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EF1634A48DB6636ED018CF5 /* Pods_BudTransactionsCommonPods_BudTransactionsTests.framework */; };
 		83B77E3D11C5808B07638A37 /* Pods_BudTransactionsCommonPods_BudTransactions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C6D981168DE175FDEC157C /* Pods_BudTransactionsCommonPods_BudTransactions.framework */; };
 /* End PBXBuildFile section */
@@ -125,6 +129,10 @@
 		1DF04C032128735E0095A931 /* transactions_list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = transactions_list.json; sourceTree = "<group>"; };
 		1DF04C05212879790095A931 /* APIMockNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMockNetworkClient.swift; sourceTree = "<group>"; };
 		1DF04C072128834B0095A931 /* TransactionListNetworkModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListNetworkModelTests.swift; sourceTree = "<group>"; };
+		1DF04C09212888890095A931 /* MainDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDatabase.swift; sourceTree = "<group>"; };
+		1DF04C0C21288A450095A931 /* ProductRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRealmModel.swift; sourceTree = "<group>"; };
+		1DF04C0E21288B270095A931 /* TransactionRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRealmModel.swift; sourceTree = "<group>"; };
+		1DF04C1121288D450095A931 /* TransactionsDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsDatabase.swift; sourceTree = "<group>"; };
 		231EB9AE9B66B2BD33101023 /* Pods-BudTransactionsCommonPods-BudTransactionsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudTransactionsCommonPods-BudTransactionsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactionsTests/Pods-BudTransactionsCommonPods-BudTransactionsTests.release.xcconfig"; sourceTree = "<group>"; };
 		6EF1634A48DB6636ED018CF5 /* Pods_BudTransactionsCommonPods_BudTransactionsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BudTransactionsCommonPods_BudTransactionsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81F42DBFA8F313E0D1133648 /* Pods-BudTransactionsCommonPods-BudTransactions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudTransactionsCommonPods-BudTransactions.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactions/Pods-BudTransactionsCommonPods-BudTransactions.debug.xcconfig"; sourceTree = "<group>"; };
@@ -290,6 +298,8 @@
 		1D6FD63F2126AFCA005D0ADF /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
+				1DF04C09212888890095A931 /* MainDatabase.swift */,
+				1DF04C0B21288A050095A931 /* TransactionsDatabase */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -419,6 +429,24 @@
 				1DF04C05212879790095A931 /* APIMockNetworkClient.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		1DF04C0B21288A050095A931 /* TransactionsDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				1DF04C1021288CF90095A931 /* RealmModels */,
+				1DF04C1121288D450095A931 /* TransactionsDatabase.swift */,
+			);
+			path = TransactionsDatabase;
+			sourceTree = "<group>";
+		};
+		1DF04C1021288CF90095A931 /* RealmModels */ = {
+			isa = PBXGroup;
+			children = (
+				1DF04C0E21288B270095A931 /* TransactionRealmModel.swift */,
+				1DF04C0C21288A450095A931 /* ProductRealmModel.swift */,
+			);
+			path = RealmModels;
 			sourceTree = "<group>";
 		};
 		1FFA4BCE43852DB415CD9848 /* Pods */ = {
@@ -664,6 +692,7 @@
 			files = (
 				1D6FD61C21260B80005D0ADF /* DomainModel.swift in Sources */,
 				1D6FD6382126AD53005D0ADF /* AppearanceService.swift in Sources */,
+				1DF04C0D21288A450095A931 /* ProductRealmModel.swift in Sources */,
 				1DAAA0E9212771E80043AC86 /* ImageDownloader.swift in Sources */,
 				1DAAA0DE212728A60043AC86 /* DebugLog.swift in Sources */,
 				1D6FD62B2126A9F3005D0ADF /* AppService.swift in Sources */,
@@ -674,6 +703,7 @@
 				1DF04BF3212862040095A931 /* ProductDomainModel.swift in Sources */,
 				1D7C388A2126B5B900B8B3C6 /* DefaultNetworkClient.swift in Sources */,
 				1D6FD62121260C85005D0ADF /* StringExtensions.swift in Sources */,
+				1DF04C1221288D450095A931 /* TransactionsDatabase.swift in Sources */,
 				1D6FD62F2126AA78005D0ADF /* AppCoordinatorService.swift in Sources */,
 				1D6FD5F0212607A5005D0ADF /* AppDelegate.swift in Sources */,
 				1DF04BEF21285A8A0095A931 /* TransactionsAPI.swift in Sources */,
@@ -701,6 +731,8 @@
 				1D6FD6322126AABA005D0ADF /* AppCoordinator.swift in Sources */,
 				1D6FD61421260906005D0ADF /* APIErrors.swift in Sources */,
 				1D6FD62621260D98005D0ADF /* BudColour.swift in Sources */,
+				1DF04C0F21288B270095A931 /* TransactionRealmModel.swift in Sources */,
+				1DF04C0A212888890095A931 /* MainDatabase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

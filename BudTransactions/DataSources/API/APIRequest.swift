@@ -12,10 +12,15 @@ import Foundation
 /**This struct provides an optional URLRequest to be used for network requests.
  ### Usage Example: ###
  ````
- let parameters: [RequestParameter] = [(RequestParametersType.fields("in-current-season"), ["true"])]
- let roundInSeasonRequest = APIRequest(endpoint: "teams", ids: [444], pathOptionalSuffix: "rounds", parameters: parameters)
- // let _ = roundInSeasonRequest.urlString // "https://mobile-dev-api.crowdscores.com/v2/teams/444/rounds?fields%5Bin-current-season%5D=true"
- // let _ = roundInSeasonRequest.request // The URLRequest
+ let transactionRequest = APIRequest(endpoint: "5b33bdb43200008f0ad1e256",
+ ids: nil,
+ pathOptionalSuffix: nil,
+ parameters: nil,
+ body: nil,
+ method: .get,
+ apiVersion: .version2)
+ // let _ = transactionRequest.urlString // "​http://www.mocky.io/v2/5b33bdb43200008f0ad1e256"
+ // let _ = transactionRequest.request.valid // The URLRequest
  ````
  */
 struct APIRequest {
