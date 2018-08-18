@@ -9,11 +9,15 @@
 import Foundation
 import UIKit
 
-class DefaultNetworkConfigurator: NetworkConfigurator {
+final class CachingNetworkConfigurator: NetworkConfigurator {
 
   lazy var configurationForCurrentEnvironment: URLSessionConfiguration = {
     let config = URLSessionConfiguration.default
-    //TODO: Configure cache
+    let memoryCapacity = 20 * 1024 * 1024
+    let diskCapacity = 50 * 1024 * 1024
+    let cache = URLCache(memoryCapacity: memoryCapacity, diskCapacity: diskCapacity, diskPath: nil)
+    config.urlCache = cache
+    config.requestCachePolicy = .returnCacheDataElseLoad
     return config
   }()
 }

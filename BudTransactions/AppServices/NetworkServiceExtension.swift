@@ -13,7 +13,8 @@ import UIKit
 extension NetworkService {
 
   func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    NetworkService.shared.configureService()
+    NetworkService.safeSession.configureService()
+    NetworkService.cachedSession.configureService()
     return true
   }
 }

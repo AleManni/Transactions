@@ -14,8 +14,11 @@ final class NetworkService: AppService, ApplicationService, Network {
   private var networkClient: NetworkClient
   private let configurator: NetworkConfigurator
 
-  static let shared = NetworkService(networkClient: DefaultNetworkClient(),
-                                            configurator: DefaultNetworkConfigurator())
+  static let safeSession = NetworkService(networkClient: DefaultNetworkClient(),
+                                          configurator: EphemeralNetworkConfigurator())
+
+  static let cachedSession = NetworkService(networkClient: DefaultNetworkClient(),
+                                     configurator: CachingNetworkConfigurator())
 
   required  init(networkClient: NetworkClient, configurator: NetworkConfigurator) {
     self.networkClient = networkClient
@@ -35,3 +38,5 @@ final class NetworkService: AppService, ApplicationService, Network {
     })
   }
 }
+
+

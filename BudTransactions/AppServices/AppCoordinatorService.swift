@@ -11,10 +11,9 @@ import UIKit
 /**
  `DefaultAppCoordinatorService` is an app service that manage the app coordinator. See `DefaultAppCoordinator`.
  */
-final class DefaultAppCoordinatorService: AppService, ApplicationService {
+final class AppCoordinatorService: AppService, ApplicationService {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
     DefaultAppCoordinator.shared.performsStartUpOperations()
-
     return true
   }
 }

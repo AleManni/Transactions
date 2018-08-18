@@ -9,6 +9,7 @@
 import Foundation
 
 public enum NetworkErrors: Error {
+  case invalidURL
   case jsonDeserializationError(Error)
   case noResult
 }

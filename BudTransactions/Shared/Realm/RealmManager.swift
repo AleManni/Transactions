@@ -11,7 +11,7 @@ import RealmSwift
 
 /**
  `RealmManager` is a class that manage the different databases used by the app.
- Due to the sensitivity of the data, it sets up the following ENCRYPTED database:
+ Due to the sensitivity of the data, it sets up the following 64 BYTES ENCRYPTED database:
  - Default
  */
 final class RealmManager: NSObject {
@@ -37,14 +37,14 @@ final class RealmManager: NSObject {
   }
 
   private static func randomData() -> Data? {
-    var keyData = Data(count: 32)
+    var keyData = Data(count: 64)
     let result = keyData.withUnsafeMutableBytes {
-      SecRandomCopyBytes(kSecRandomDefault, 32, $0)
+      SecRandomCopyBytes(kSecRandomDefault, 64, $0)
     }
     if result == errSecSuccess {
       return keyData
     } else {
-      debugLog("Problem generating random bytes")
+      debugLog("Realm: problem generating random key")
       return nil
     }
   }

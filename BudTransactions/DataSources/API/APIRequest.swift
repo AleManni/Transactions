@@ -26,7 +26,7 @@ struct APIRequest {
   let body: BodyType?
   let method: HTTPMethod
   let apiVersion: APIVersion
-  var timeout: Double?
+  var cachePolicy: NSURLRequest.CachePolicy?
 
   init(endpoint: String, ids: [Int]?,
        pathOptionalSuffix: String? = nil,
@@ -45,6 +45,10 @@ struct APIRequest {
 }
 
 extension APIRequest {
+
+  init(endpoint: String) {
+    self.init(endpoint: endpoint, ids: nil)
+  }
 
   var urlRequest: (valid: URLRequest?, error: Error?) {
     guard let urlString = urlString,
@@ -73,8 +77,8 @@ extension APIRequest {
       }
     }
     request.addValue("application/json", forHTTPHeaderField: "Accept")
-    if let timeout = timeout {
-      request.timeoutInterval = timeout
+    if let cachePolicy = cachePolicy {
+      request.cachePolicy = cachePolicy
     }
     return (request, nil)
   }
