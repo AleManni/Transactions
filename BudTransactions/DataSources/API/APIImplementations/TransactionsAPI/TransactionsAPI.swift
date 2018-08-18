@@ -13,12 +13,12 @@ final class TransactionsAPI: API {
 
   var networkService: NetworkService
 
-  init(_ networkService: NetworkService?) {
-    guard let networkService = networkService else {
-      self.networkService = NetworkService.safeSession
-      return
-    }
+  init(_ networkService: NetworkService) {
     self.networkService = networkService
+  }
+
+  convenience init() {
+    self.init(NetworkService.safeSession)
   }
 
   let transactionsRequest = APIRequest(endpoint: "5b33bdb43200008f0ad1e256",
@@ -47,19 +47,18 @@ final class TransactionsAPI: API {
 extension TransactionDomainModel {
 
   init?(networkModel: TransactionNetworkModel) {
-    guard let id = Int(networkModel.id),
-      let date = DateTools.dateFromAPIString(networkModel.date),
+    guard let date = DateTools.dateFromAPIString(networkModel.date),
       let category = TransactionCategory(rawValue: networkModel.categoryID) else {
         return nil
     }
-    self.id = id
+    self.id = networkModel.id
     self.date = date
     self.description = networkModel.description
     self.category = category
     self.currency = networkModel.currency
     self.amount = networkModel.amount.value
-    self.product = Product(id: networkModel.product.id,
-                           title: networkModel.product.title,
-                           icon: networkModel.product.icon)
+    self.product = ProductDomainModel(id: networkModel.product.id,
+                                      name: networkModel.product.title.rawValue,
+                                      iconURLString: networkModel.product.icon)
   }
 }

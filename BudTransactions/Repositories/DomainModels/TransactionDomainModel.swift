@@ -9,11 +9,11 @@
 import Foundation
 
 struct TransactionDomainModel: DomainModel {
-let id: Int
+let id: String
 let date: Date
 let description: String
 let category: TransactionCategory
 let currency: Currency
 let amount: Double
-let product: Product
+let product: ProductDomainModel
 }

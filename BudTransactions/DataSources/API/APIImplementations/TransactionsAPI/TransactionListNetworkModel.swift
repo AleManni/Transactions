@@ -16,6 +16,10 @@ import Foundation
 
 struct TransactionListNetworkModel: Codable {
   let transactions: [TransactionNetworkModel]
+
+  enum CodingKeys: String, CodingKey {
+    case transactions = "data"
+  }
 }
 
 struct TransactionNetworkModel: Codable {

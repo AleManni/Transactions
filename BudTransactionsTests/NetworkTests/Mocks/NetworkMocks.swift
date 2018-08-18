@@ -24,6 +24,8 @@ class MockNetworkConfigurator: NetworkConfigurator {
 
 class MockNetworkClient: NetworkClient {
 
+  var mockJson: String?
+
   var expectedResult: NetworkResult = .success("Test string")
 
   var configuration: URLSessionConfiguration

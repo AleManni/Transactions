@@ -10,7 +10,7 @@ import Foundation
 
 protocol API {
   associatedtype NetworkModel: Codable
-  init(_ networkService: NetworkService?)
+  init(_ networkService: NetworkService)
   var networkService: NetworkService { get set }
 }
 
@@ -33,8 +33,9 @@ extension API {
   }
 
   func mapToObject(json: Any?) -> OperationResult<NetworkModel> {
-    guard let jsonString = json as? String,
-      let jsonData = jsonString.data(using: .utf8) else {
+    guard let jsonData = json as? Data
+    //  let jsonData = jsonString.data(using: .utf8)
+      else {
         return OperationResult.failure(APIErrors.incorrectDataType)
     }
     do {
