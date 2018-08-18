@@ -43,6 +43,7 @@
 		1DAAA0E9212771E80043AC86 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAAA0E8212771E80043AC86 /* ImageDownloader.swift */; };
 		1DAAA0EE212776C10043AC86 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAAA0ED212776C10043AC86 /* NetworkServiceTests.swift */; };
 		1DAAA0F12127775A0043AC86 /* NetworkMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAAA0F02127775A0043AC86 /* NetworkMocks.swift */; };
+		1DF04BE8212852980095A931 /* ImageDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF04BE7212852980095A931 /* ImageDownloaderTests.swift */; };
 		1E6376B1A4031F2A6727A259 /* Pods_BudTransactionsCommonPods_BudTransactionsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EF1634A48DB6636ED018CF5 /* Pods_BudTransactionsCommonPods_BudTransactionsTests.framework */; };
 		83B77E3D11C5808B07638A37 /* Pods_BudTransactionsCommonPods_BudTransactions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C6D981168DE175FDEC157C /* Pods_BudTransactionsCommonPods_BudTransactions.framework */; };
 /* End PBXBuildFile section */
@@ -99,6 +100,7 @@
 		1DAAA0E8212771E80043AC86 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		1DAAA0ED212776C10043AC86 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		1DAAA0F02127775A0043AC86 /* NetworkMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkMocks.swift; sourceTree = "<group>"; };
+		1DF04BE7212852980095A931 /* ImageDownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderTests.swift; sourceTree = "<group>"; };
 		231EB9AE9B66B2BD33101023 /* Pods-BudTransactionsCommonPods-BudTransactionsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudTransactionsCommonPods-BudTransactionsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactionsTests/Pods-BudTransactionsCommonPods-BudTransactionsTests.release.xcconfig"; sourceTree = "<group>"; };
 		6EF1634A48DB6636ED018CF5 /* Pods_BudTransactionsCommonPods_BudTransactionsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BudTransactionsCommonPods_BudTransactionsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81F42DBFA8F313E0D1133648 /* Pods-BudTransactionsCommonPods-BudTransactions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudTransactionsCommonPods-BudTransactions.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactions/Pods-BudTransactionsCommonPods-BudTransactions.debug.xcconfig"; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 			children = (
 				1DAAA0EF212777430043AC86 /* Mocks */,
 				1DAAA0ED212776C10043AC86 /* NetworkServiceTests.swift */,
+				1DF04BE7212852980095A931 /* ImageDownloaderTests.swift */,
 			);
 			path = NetworkTests;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 			files = (
 				1DAAA0F12127775A0043AC86 /* NetworkMocks.swift in Sources */,
 				1DAAA0EE212776C10043AC86 /* NetworkServiceTests.swift in Sources */,
+				1DF04BE8212852980095A931 /* ImageDownloaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,8 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
   private var services: [ApplicationService] = [
-    NetworkService.defaultSession,
-    ImageDownloader.shared,
+    NetworkService.safeSession,
+    NetworkService.cachedSession,
     ReachabilityService(),
     AppearanceService(),
     RealmService(),

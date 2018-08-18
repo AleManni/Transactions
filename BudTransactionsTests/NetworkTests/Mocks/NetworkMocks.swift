@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 @testable import BudTransactions
 
 
@@ -23,13 +24,35 @@ class MockNetworkConfigurator: NetworkConfigurator {
 
 class MockNetworkClient: NetworkClient {
 
-  var configuration: URLSessionConfiguration
+  var expectedResult: NetworkResult = .success("Test string")
 
-  func handleRequest(_ request: URLRequest, completion: @escaping (NetworkResult) -> Void) {
-    // Empty implementation
-  }
+  var configuration: URLSessionConfiguration
 
   init(configuration: URLSessionConfiguration) {
     self.configuration = configuration
+  }
+
+  func handleRequest(_ request: URLRequest, completion: @escaping (NetworkResult) -> Void) {
+    completion(expectedResult)
+  }
+
+}
+
+class MockImageNetworkClient: NetworkClient {
+
+  lazy var expectedResult: NetworkResult = {
+    let image = UIImage(named: "image_placeholder")
+    let data = UIImageJPEGRepresentation(image!, 1)
+    return .success(data)
+  }()
+
+  var configuration: URLSessionConfiguration
+
+  init(configuration: URLSessionConfiguration) {
+    self.configuration = configuration
+  }
+
+  func handleRequest(_ request: URLRequest, completion: @escaping (NetworkResult) -> Void) {
+    completion(expectedResult)
   }
 }
