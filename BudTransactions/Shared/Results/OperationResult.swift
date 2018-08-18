@@ -10,7 +10,7 @@ import Foundation
 
 public enum OperationResult<T> {
   case success(T)
-  case failure(Error?)
+  case failure(Error)
 
   var type: T.Type {
     return T.self

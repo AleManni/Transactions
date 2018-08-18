@@ -9,14 +9,14 @@
 import Foundation
 
 protocol API {
-  associatedtype Domain: Codable
+  associatedtype NetworkModel: Codable
   init(_ networkService: NetworkService?)
   var networkService: NetworkService { get set }
 }
 
 extension API {
 
-  func getObject(request: APIRequest, completion: @escaping ((OperationResult<Domain>) -> Void)) {
+  func getObject(request: APIRequest, completion: @escaping ((OperationResult<NetworkModel>) -> Void)) {
     if let urlRequest = request.urlRequest.valid {
       networkService.handleRequest(urlRequest, completion: { networkCompletion in
 
@@ -28,27 +28,20 @@ extension API {
         }
       })
     } else {
-      completion(OperationResult<Domain>.failure(request.urlRequest.error))
+      completion(OperationResult<NetworkModel>.failure(request.urlRequest.error ?? APIErrors.invalidRequest))
     }
   }
 
-  func mapToObject(json: Any?) -> OperationResult<Domain> {
+  func mapToObject(json: Any?) -> OperationResult<NetworkModel> {
     guard let jsonString = json as? String,
       let jsonData = jsonString.data(using: .utf8) else {
         return OperationResult.failure(APIErrors.incorrectDataType)
     }
     do {
-      let object = try JSONDecoder().decode(Domain.self, from: jsonData)
-      return OperationResult<Domain>.success(object)
+      let object = try JSONDecoder().decode(NetworkModel.self, from: jsonData)
+      return OperationResult<NetworkModel>.success(object)
     } catch let error {
       return .failure(APIErrors.deserializationError(error))
     }
-  }
-
-  func dateFormatter() -> DateFormatter {
-    let formatter = DateFormatter()
-    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssxxx"
-    formatter.locale = Locale(identifier: "en_US_POSIX")
-    return formatter
   }
 }

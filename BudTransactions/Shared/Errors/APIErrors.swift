@@ -12,6 +12,8 @@ import Foundation
  Specialized error type for API classes
  */
 public enum APIErrors: Error {
+  case invalidRequest
   case deserializationError(Error)
   case incorrectDataType
+  case networkError(Error)
 }
