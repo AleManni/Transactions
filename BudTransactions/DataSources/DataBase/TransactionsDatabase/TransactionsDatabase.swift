@@ -10,7 +10,7 @@ import Foundation
 
 import RealmSwift
 
-final class TransactionsDatabase: MainDatabase {
+final class TransactionsDatabase: MainDatabase, TransactionsDatabaseInterface {
 
   private let writeSerialQueue = DispatchQueue(label: "Realm writing queue")
 

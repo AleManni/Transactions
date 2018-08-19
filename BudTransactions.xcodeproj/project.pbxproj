@@ -45,6 +45,9 @@
 		1DAAA0F12127775A0043AC86 /* NetworkMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAAA0F02127775A0043AC86 /* NetworkMocks.swift */; };
 		1DD669FD21293DE500B04DD1 /* TransactionsDatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD669FC21293DE500B04DD1 /* TransactionsDatabaseTests.swift */; };
 		1DD66A0021293F2A00B04DD1 /* MockTransactionDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD669FF21293F2A00B04DD1 /* MockTransactionDomainModel.swift */; };
+		1DD66A0221294EA500B04DD1 /* TransactionsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD66A0121294EA400B04DD1 /* TransactionsRepository.swift */; };
+		1DD66A042129500D00B04DD1 /* TransactionsDatabaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD66A032129500D00B04DD1 /* TransactionsDatabaseInterface.swift */; };
+		1DD66A062129509900B04DD1 /* TransactionsAPIInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD66A052129509900B04DD1 /* TransactionsAPIInterface.swift */; };
 		1DF04BE8212852980095A931 /* ImageDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF04BE7212852980095A931 /* ImageDownloaderTests.swift */; };
 		1DF04BEC212856840095A931 /* TransactionListNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF04BEB212856840095A931 /* TransactionListNetworkModel.swift */; };
 		1DF04BEF21285A8A0095A931 /* TransactionsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF04BEE21285A8A0095A931 /* TransactionsAPI.swift */; };
@@ -120,6 +123,9 @@
 		1DAAA0F02127775A0043AC86 /* NetworkMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkMocks.swift; sourceTree = "<group>"; };
 		1DD669FC21293DE500B04DD1 /* TransactionsDatabaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsDatabaseTests.swift; sourceTree = "<group>"; };
 		1DD669FF21293F2A00B04DD1 /* MockTransactionDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionDomainModel.swift; sourceTree = "<group>"; };
+		1DD66A0121294EA400B04DD1 /* TransactionsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsRepository.swift; sourceTree = "<group>"; };
+		1DD66A032129500D00B04DD1 /* TransactionsDatabaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsDatabaseInterface.swift; sourceTree = "<group>"; };
+		1DD66A052129509900B04DD1 /* TransactionsAPIInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsAPIInterface.swift; sourceTree = "<group>"; };
 		1DF04BE7212852980095A931 /* ImageDownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderTests.swift; sourceTree = "<group>"; };
 		1DF04BEB212856840095A931 /* TransactionListNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListNetworkModel.swift; sourceTree = "<group>"; };
 		1DF04BEE21285A8A0095A931 /* TransactionsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsAPI.swift; sourceTree = "<group>"; };
@@ -398,10 +404,19 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		1DD66A072129516900B04DD1 /* NetworkModels */ = {
+			isa = PBXGroup;
+			children = (
+				1DF04BEB212856840095A931 /* TransactionListNetworkModel.swift */,
+			);
+			path = NetworkModels;
+			sourceTree = "<group>";
+		};
 		1DF04BE92128564A0095A931 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
 				1DF04BEA2128566C0095A931 /* DomainModels */,
+				1DD66A0121294EA400B04DD1 /* TransactionsRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -418,7 +433,8 @@
 		1DF04BED21285A6B0095A931 /* TransactionsAPI */ = {
 			isa = PBXGroup;
 			children = (
-				1DF04BEB212856840095A931 /* TransactionListNetworkModel.swift */,
+				1DD66A072129516900B04DD1 /* NetworkModels */,
+				1DD66A052129509900B04DD1 /* TransactionsAPIInterface.swift */,
 				1DF04BEE21285A8A0095A931 /* TransactionsAPI.swift */,
 			);
 			path = TransactionsAPI;
@@ -465,6 +481,7 @@
 			isa = PBXGroup;
 			children = (
 				1DF04C1021288CF90095A931 /* RealmModels */,
+				1DD66A032129500D00B04DD1 /* TransactionsDatabaseInterface.swift */,
 				1DF04C1121288D450095A931 /* TransactionsDatabase.swift */,
 			);
 			path = TransactionsDatabase;
@@ -721,6 +738,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D6FD61C21260B80005D0ADF /* DomainModel.swift in Sources */,
+				1DD66A062129509900B04DD1 /* TransactionsAPIInterface.swift in Sources */,
 				1D6FD6382126AD53005D0ADF /* AppearanceService.swift in Sources */,
 				1DF04C0D21288A450095A931 /* ProductRealmModel.swift in Sources */,
 				1DAAA0E9212771E80043AC86 /* ImageDownloader.swift in Sources */,
@@ -731,6 +749,7 @@
 				1D6FD6342126AAC2005D0ADF /* NavigationService.swift in Sources */,
 				1D6FD6442126B1F8005D0ADF /* CachingNetworkConfigurator.swift in Sources */,
 				1DF04BF3212862040095A931 /* ProductDomainModel.swift in Sources */,
+				1DD66A042129500D00B04DD1 /* TransactionsDatabaseInterface.swift in Sources */,
 				1D7C388A2126B5B900B8B3C6 /* DefaultNetworkClient.swift in Sources */,
 				1D6FD62121260C85005D0ADF /* StringExtensions.swift in Sources */,
 				1DF04C1221288D450095A931 /* TransactionsDatabase.swift in Sources */,
@@ -752,6 +771,7 @@
 				1D6FD6412126AFEF005D0ADF /* APIInterface.swift in Sources */,
 				1DAAA0E321272D7B0043AC86 /* DatabaseMigration.swift in Sources */,
 				1D6FD62421260D3A005D0ADF /* FontFormatter.swift in Sources */,
+				1DD66A0221294EA500B04DD1 /* TransactionsRepository.swift in Sources */,
 				1DAAA0DA212727480043AC86 /* NetworkResult.swift in Sources */,
 				1DF04BFA21286CDF0095A931 /* ProductCategory.swift in Sources */,
 				1D6FD62D2126AA32005D0ADF /* ReachabilityService.swift in Sources */,
