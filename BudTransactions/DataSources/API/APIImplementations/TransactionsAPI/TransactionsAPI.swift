@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class TransactionsAPI: TransactionsAPIInterface {
+final class TransactionsAPI: TransactionsAPIInterface, API {
   typealias NetworkModel = TransactionListNetworkModel
 
   var networkService: NetworkService

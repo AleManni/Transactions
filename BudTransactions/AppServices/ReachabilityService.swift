@@ -12,7 +12,13 @@ import Reachability
 
 final class ReachabilityService: AppService, ApplicationService {
 
-  lazy var shared: Reachability? = {
+  static let shared = ReachabilityService()
+
+  var isReachable: Bool {
+    return reachability?.connection != nil
+  }
+
+  lazy var reachability: Reachability? = {
     if let reachability = Reachability() {
       return reachability
     } else {
@@ -22,7 +28,7 @@ final class ReachabilityService: AppService, ApplicationService {
 
   func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
     do {
-      try shared?.startNotifier()
+      try reachability?.startNotifier()
     } catch {
       debugLog("It is not possible to start the reachability agent: \(self)")
     }
@@ -31,17 +37,17 @@ final class ReachabilityService: AppService, ApplicationService {
 
   func applicationWillEnterForeground(_ application: UIApplication) {
     do {
-      try shared?.startNotifier()
+      try reachability?.startNotifier()
     } catch {
       debugLog("It is not possible to start the reachability agent: \(self)")
     }
   }
 
   func applicationDidEnterBackground(_ application: UIApplication) {
-      shared?.stopNotifier()
+      reachability?.stopNotifier()
   }
 
   func applicationWillTerminate(_ application: UIApplication) {
-      shared?.stopNotifier()
+      reachability?.stopNotifier()
   }
 }

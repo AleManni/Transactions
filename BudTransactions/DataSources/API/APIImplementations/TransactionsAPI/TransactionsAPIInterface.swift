@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol TransactionsAPIInterface: API {
+protocol TransactionsAPIInterface: class {
   func getTransactions(completion: @escaping ((OperationResult<[TransactionDomainModel]>) -> Void))
 }

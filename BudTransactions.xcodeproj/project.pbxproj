@@ -48,6 +48,10 @@
 		1DD66A0221294EA500B04DD1 /* TransactionsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD66A0121294EA400B04DD1 /* TransactionsRepository.swift */; };
 		1DD66A042129500D00B04DD1 /* TransactionsDatabaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD66A032129500D00B04DD1 /* TransactionsDatabaseInterface.swift */; };
 		1DD66A062129509900B04DD1 /* TransactionsAPIInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD66A052129509900B04DD1 /* TransactionsAPIInterface.swift */; };
+		1DD66A0921295DB700B04DD1 /* TransactionRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD66A0821295DB700B04DD1 /* TransactionRepositoryInterface.swift */; };
+		1DD66A0C21295EBF00B04DD1 /* TransactionsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD66A0B21295EBF00B04DD1 /* TransactionsRepositoryTests.swift */; };
+		1DD66A0E212962E400B04DD1 /* MockTransactionsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD66A0D212962E400B04DD1 /* MockTransactionsAPI.swift */; };
+		1DD66A102129631E00B04DD1 /* MockTransactionsDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD66A0F2129631E00B04DD1 /* MockTransactionsDatabase.swift */; };
 		1DF04BE8212852980095A931 /* ImageDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF04BE7212852980095A931 /* ImageDownloaderTests.swift */; };
 		1DF04BEC212856840095A931 /* TransactionListNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF04BEB212856840095A931 /* TransactionListNetworkModel.swift */; };
 		1DF04BEF21285A8A0095A931 /* TransactionsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF04BEE21285A8A0095A931 /* TransactionsAPI.swift */; };
@@ -126,6 +130,10 @@
 		1DD66A0121294EA400B04DD1 /* TransactionsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsRepository.swift; sourceTree = "<group>"; };
 		1DD66A032129500D00B04DD1 /* TransactionsDatabaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsDatabaseInterface.swift; sourceTree = "<group>"; };
 		1DD66A052129509900B04DD1 /* TransactionsAPIInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsAPIInterface.swift; sourceTree = "<group>"; };
+		1DD66A0821295DB700B04DD1 /* TransactionRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRepositoryInterface.swift; sourceTree = "<group>"; };
+		1DD66A0B21295EBF00B04DD1 /* TransactionsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsRepositoryTests.swift; sourceTree = "<group>"; };
+		1DD66A0D212962E400B04DD1 /* MockTransactionsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionsAPI.swift; sourceTree = "<group>"; };
+		1DD66A0F2129631E00B04DD1 /* MockTransactionsDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionsDatabase.swift; sourceTree = "<group>"; };
 		1DF04BE7212852980095A931 /* ImageDownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderTests.swift; sourceTree = "<group>"; };
 		1DF04BEB212856840095A931 /* TransactionListNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListNetworkModel.swift; sourceTree = "<group>"; };
 		1DF04BEE21285A8A0095A931 /* TransactionsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsAPI.swift; sourceTree = "<group>"; };
@@ -384,6 +392,7 @@
 			isa = PBXGroup;
 			children = (
 				1DD669FE21293F1000B04DD1 /* Mocks */,
+				1DD66A0B21295EBF00B04DD1 /* TransactionsRepositoryTests.swift */,
 			);
 			path = RepositoriesTests;
 			sourceTree = "<group>";
@@ -400,6 +409,8 @@
 			isa = PBXGroup;
 			children = (
 				1DD669FF21293F2A00B04DD1 /* MockTransactionDomainModel.swift */,
+				1DD66A0D212962E400B04DD1 /* MockTransactionsAPI.swift */,
+				1DD66A0F2129631E00B04DD1 /* MockTransactionsDatabase.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -412,11 +423,20 @@
 			path = NetworkModels;
 			sourceTree = "<group>";
 		};
-		1DF04BE92128564A0095A931 /* Repositories */ = {
+		1DD66A0A21295DC800B04DD1 /* TransactionRepository */ = {
 			isa = PBXGroup;
 			children = (
 				1DF04BEA2128566C0095A931 /* DomainModels */,
+				1DD66A0821295DB700B04DD1 /* TransactionRepositoryInterface.swift */,
 				1DD66A0121294EA400B04DD1 /* TransactionsRepository.swift */,
+			);
+			path = TransactionRepository;
+			sourceTree = "<group>";
+		};
+		1DF04BE92128564A0095A931 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				1DD66A0A21295DC800B04DD1 /* TransactionRepository */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -745,6 +765,7 @@
 				1DAAA0DE212728A60043AC86 /* DebugLog.swift in Sources */,
 				1D6FD62B2126A9F3005D0ADF /* AppService.swift in Sources */,
 				1D6FD618212609B0005D0ADF /* OperationResult.swift in Sources */,
+				1DD66A0921295DB700B04DD1 /* TransactionRepositoryInterface.swift in Sources */,
 				1DAAA0E5212758390043AC86 /* EphemeralNetworkConfigurator.swift in Sources */,
 				1D6FD6342126AAC2005D0ADF /* NavigationService.swift in Sources */,
 				1D6FD6442126B1F8005D0ADF /* CachingNetworkConfigurator.swift in Sources */,
@@ -790,13 +811,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DD66A0C21295EBF00B04DD1 /* TransactionsRepositoryTests.swift in Sources */,
 				1DAAA0F12127775A0043AC86 /* NetworkMocks.swift in Sources */,
 				1DF04C082128834B0095A931 /* TransactionListNetworkModelTests.swift in Sources */,
 				1DAAA0EE212776C10043AC86 /* NetworkServiceTests.swift in Sources */,
 				1DD66A0021293F2A00B04DD1 /* MockTransactionDomainModel.swift in Sources */,
+				1DD66A0E212962E400B04DD1 /* MockTransactionsAPI.swift in Sources */,
 				1DD669FD21293DE500B04DD1 /* TransactionsDatabaseTests.swift in Sources */,
 				1DF04BE8212852980095A931 /* ImageDownloaderTests.swift in Sources */,
 				1DF04C01212873230095A931 /* TestUtilities.swift in Sources */,
+				1DD66A102129631E00B04DD1 /* MockTransactionsDatabase.swift in Sources */,
 				1DF04C06212879790095A931 /* APIMockNetworkClient.swift in Sources */,
 				1DF04BFE212872E60095A931 /* TransactionsAPITests.swift in Sources */,
 			);

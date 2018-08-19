@@ -19,7 +19,6 @@ import Reachability
     return NavigationService(viewControllersFactory: ModulesFactory(repositories: ProductionRepositories()))
   }()
 
-
   func performsStartUpOperations() {
     setObserver()
   }

@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   private var services: [ApplicationService] = [
     NetworkService.safeSession,
     NetworkService.cachedSession,
-    ReachabilityService(),
+    ReachabilityService.shared,
     AppearanceService(),
     RealmService(),
     AppCoordinatorService()
