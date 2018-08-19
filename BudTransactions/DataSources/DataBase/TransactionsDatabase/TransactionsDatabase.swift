@@ -14,19 +14,33 @@ final class TransactionsDatabase: MainDatabase {
 
   private let writeSerialQueue = DispatchQueue(label: "Realm writing queue")
 
-  func save(transaction: DomainModel) {
-    guard let model = transaction as? TransactionDomainModel,
-    let transactionObject = TransactionRealmModel(domainModel: model),
-    let productObject = ProductRealmModel(domainModel: model.product) else {
+  func save(domainModel: TransactionDomainModel, completion: @escaping (Bool) -> Void) {
+    guard let transactionObject = TransactionRealmModel(domainModel: domainModel),
+    let productObject = ProductRealmModel(domainModel: domainModel.product) else {
       return
     }
     writeSerialQueue.async { [weak self] in
     self?.write(transactionObject, shouldUpdateIfExists: true)
     self?.write(productObject, shouldUpdateIfExists: true)
+      DispatchQueue.main.async {
+      completion(true)
+      }
     }
   }
 
-  func getTransactions() -> [TransactionDomainModel] {
+  func save(domainModels: [TransactionDomainModel], completion: @escaping (Bool) -> Void) {
+    var counter = 0
+    domainModels.forEach {
+      save(domainModel: $0, completion: { _ in
+        counter += 1
+        if counter == domainModels.count {
+          completion(true)
+        }
+      })
+    }
+  }
+
+  func getAllTransactions() -> [TransactionDomainModel] {
     let transactions = objects(ofType: TransactionRealmModel.self)
     let models: [TransactionDomainModel] = transactions.compactMap {
       guard let realmProduct = object(ofType: ProductRealmModel.self, primaryKey: $0.productId) else {
@@ -55,5 +69,3 @@ extension TransactionDomainModel {
                                       iconURLString: productDBModel.iconURLString)
   }
 }
-
-

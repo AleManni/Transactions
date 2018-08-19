@@ -43,6 +43,8 @@
 		1DAAA0E9212771E80043AC86 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAAA0E8212771E80043AC86 /* ImageDownloader.swift */; };
 		1DAAA0EE212776C10043AC86 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAAA0ED212776C10043AC86 /* NetworkServiceTests.swift */; };
 		1DAAA0F12127775A0043AC86 /* NetworkMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAAA0F02127775A0043AC86 /* NetworkMocks.swift */; };
+		1DD669FD21293DE500B04DD1 /* TransactionsDatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD669FC21293DE500B04DD1 /* TransactionsDatabaseTests.swift */; };
+		1DD66A0021293F2A00B04DD1 /* MockTransactionDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD669FF21293F2A00B04DD1 /* MockTransactionDomainModel.swift */; };
 		1DF04BE8212852980095A931 /* ImageDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF04BE7212852980095A931 /* ImageDownloaderTests.swift */; };
 		1DF04BEC212856840095A931 /* TransactionListNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF04BEB212856840095A931 /* TransactionListNetworkModel.swift */; };
 		1DF04BEF21285A8A0095A931 /* TransactionsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF04BEE21285A8A0095A931 /* TransactionsAPI.swift */; };
@@ -116,6 +118,8 @@
 		1DAAA0E8212771E80043AC86 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		1DAAA0ED212776C10043AC86 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		1DAAA0F02127775A0043AC86 /* NetworkMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkMocks.swift; sourceTree = "<group>"; };
+		1DD669FC21293DE500B04DD1 /* TransactionsDatabaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsDatabaseTests.swift; sourceTree = "<group>"; };
+		1DD669FF21293F2A00B04DD1 /* MockTransactionDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionDomainModel.swift; sourceTree = "<group>"; };
 		1DF04BE7212852980095A931 /* ImageDownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderTests.swift; sourceTree = "<group>"; };
 		1DF04BEB212856840095A931 /* TransactionListNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListNetworkModel.swift; sourceTree = "<group>"; };
 		1DF04BEE21285A8A0095A931 /* TransactionsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsAPI.swift; sourceTree = "<group>"; };
@@ -201,6 +205,7 @@
 				1DF04C00212873230095A931 /* TestUtilities.swift */,
 				1DAAA0EC2127764A0043AC86 /* NetworkTests */,
 				1DF04BFB212872BE0095A931 /* DataSourcesTests */,
+				1DD669FA21293DA600B04DD1 /* RepositoriesTests */,
 				1D6FD606212607A7005D0ADF /* Info.plist */,
 			);
 			path = BudTransactionsTests;
@@ -369,6 +374,30 @@
 			path = APIImplementations;
 			sourceTree = "<group>";
 		};
+		1DD669FA21293DA600B04DD1 /* RepositoriesTests */ = {
+			isa = PBXGroup;
+			children = (
+				1DD669FE21293F1000B04DD1 /* Mocks */,
+			);
+			path = RepositoriesTests;
+			sourceTree = "<group>";
+		};
+		1DD669FB21293DD200B04DD1 /* DatabasesTests */ = {
+			isa = PBXGroup;
+			children = (
+				1DD669FC21293DE500B04DD1 /* TransactionsDatabaseTests.swift */,
+			);
+			path = DatabasesTests;
+			sourceTree = "<group>";
+		};
+		1DD669FE21293F1000B04DD1 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				1DD669FF21293F2A00B04DD1 /* MockTransactionDomainModel.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		1DF04BE92128564A0095A931 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,6 +436,7 @@
 		1DF04BFB212872BE0095A931 /* DataSourcesTests */ = {
 			isa = PBXGroup;
 			children = (
+				1DD669FB21293DD200B04DD1 /* DatabasesTests */,
 				1DF04BFC212872D30095A931 /* APITests */,
 			);
 			path = DataSourcesTests;
@@ -743,6 +773,8 @@
 				1DAAA0F12127775A0043AC86 /* NetworkMocks.swift in Sources */,
 				1DF04C082128834B0095A931 /* TransactionListNetworkModelTests.swift in Sources */,
 				1DAAA0EE212776C10043AC86 /* NetworkServiceTests.swift in Sources */,
+				1DD66A0021293F2A00B04DD1 /* MockTransactionDomainModel.swift in Sources */,
+				1DD669FD21293DE500B04DD1 /* TransactionsDatabaseTests.swift in Sources */,
 				1DF04BE8212852980095A931 /* ImageDownloaderTests.swift in Sources */,
 				1DF04C01212873230095A931 /* TestUtilities.swift in Sources */,
 				1DF04C06212879790095A931 /* APIMockNetworkClient.swift in Sources */,
