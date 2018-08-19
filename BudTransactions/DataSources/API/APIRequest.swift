@@ -20,7 +20,7 @@ import Foundation
  method: .get,
  apiVersion: .version2)
  // let _ = transactionRequest.urlString // "​http://www.mocky.io/v2/5b33bdb43200008f0ad1e256"
- // let _ = transactionRequest.request.valid // The URLRequest
+ // let _ = transactionRequest.request // The URLRequest
  ````
  */
 struct APIRequest {

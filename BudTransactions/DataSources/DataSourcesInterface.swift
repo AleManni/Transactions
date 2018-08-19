@@ -1,5 +1,5 @@
 //
-//  DataSources.swift
+//  DataSourcesInterface.swift
 //  BudTransactions
 //
 //  Created by Alessandro Manni on 16/08/2018.
@@ -10,8 +10,3 @@ import Foundation
 
 protocol DataSource {
 }
-
-protocol DatabaseModel {
-  init?(domainModel: DomainModel)
-}
-

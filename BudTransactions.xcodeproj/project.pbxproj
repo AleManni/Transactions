@@ -13,7 +13,7 @@
 		1D6FD61421260906005D0ADF /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD61321260906005D0ADF /* APIErrors.swift */; };
 		1D6FD61621260940005D0ADF /* RepositoryErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD61521260940005D0ADF /* RepositoryErrors.swift */; };
 		1D6FD618212609B0005D0ADF /* OperationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD617212609B0005D0ADF /* OperationResult.swift */; };
-		1D6FD61A21260B46005D0ADF /* DataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD61921260B46005D0ADF /* DataSources.swift */; };
+		1D6FD61A21260B46005D0ADF /* DataSourcesInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD61921260B46005D0ADF /* DataSourcesInterface.swift */; };
 		1D6FD61C21260B80005D0ADF /* DomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD61B21260B80005D0ADF /* DomainModel.swift */; };
 		1D6FD61E21260BCA005D0ADF /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD61D21260BCA005D0ADF /* APIRequest.swift */; };
 		1D6FD62121260C85005D0ADF /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD62021260C85005D0ADF /* StringExtensions.swift */; };
@@ -52,6 +52,7 @@
 		1DD66A0C21295EBF00B04DD1 /* TransactionsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD66A0B21295EBF00B04DD1 /* TransactionsRepositoryTests.swift */; };
 		1DD66A0E212962E400B04DD1 /* MockTransactionsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD66A0D212962E400B04DD1 /* MockTransactionsAPI.swift */; };
 		1DD66A102129631E00B04DD1 /* MockTransactionsDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD66A0F2129631E00B04DD1 /* MockTransactionsDatabase.swift */; };
+		1DD66A122129641C00B04DD1 /* DatabaseModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD66A112129641C00B04DD1 /* DatabaseModelInterface.swift */; };
 		1DF04BE8212852980095A931 /* ImageDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF04BE7212852980095A931 /* ImageDownloaderTests.swift */; };
 		1DF04BEC212856840095A931 /* TransactionListNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF04BEB212856840095A931 /* TransactionListNetworkModel.swift */; };
 		1DF04BEF21285A8A0095A931 /* TransactionsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF04BEE21285A8A0095A931 /* TransactionsAPI.swift */; };
@@ -95,7 +96,7 @@
 		1D6FD61321260906005D0ADF /* APIErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrors.swift; sourceTree = "<group>"; };
 		1D6FD61521260940005D0ADF /* RepositoryErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryErrors.swift; sourceTree = "<group>"; };
 		1D6FD617212609B0005D0ADF /* OperationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationResult.swift; sourceTree = "<group>"; };
-		1D6FD61921260B46005D0ADF /* DataSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSources.swift; sourceTree = "<group>"; };
+		1D6FD61921260B46005D0ADF /* DataSourcesInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourcesInterface.swift; sourceTree = "<group>"; };
 		1D6FD61B21260B80005D0ADF /* DomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainModel.swift; sourceTree = "<group>"; };
 		1D6FD61D21260BCA005D0ADF /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		1D6FD62021260C85005D0ADF /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
@@ -134,6 +135,7 @@
 		1DD66A0B21295EBF00B04DD1 /* TransactionsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsRepositoryTests.swift; sourceTree = "<group>"; };
 		1DD66A0D212962E400B04DD1 /* MockTransactionsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionsAPI.swift; sourceTree = "<group>"; };
 		1DD66A0F2129631E00B04DD1 /* MockTransactionsDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionsDatabase.swift; sourceTree = "<group>"; };
+		1DD66A112129641C00B04DD1 /* DatabaseModelInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseModelInterface.swift; sourceTree = "<group>"; };
 		1DF04BE7212852980095A931 /* ImageDownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderTests.swift; sourceTree = "<group>"; };
 		1DF04BEB212856840095A931 /* TransactionListNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListNetworkModel.swift; sourceTree = "<group>"; };
 		1DF04BEE21285A8A0095A931 /* TransactionsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsAPI.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				1D6FD60F21260802005D0ADF /* Shared */,
 				1D6FD63D2126AFB4005D0ADF /* DataSources */,
 				1DF04BE92128564A0095A931 /* Repositories */,
+				1DD66A13212964D300B04DD1 /* Modules */,
 				1D6FD5EF212607A5005D0ADF /* AppDelegate.swift */,
 				1D6FD5F6212607A7005D0ADF /* Assets.xcassets */,
 				1D6FD5F8212607A7005D0ADF /* LaunchScreen.storyboard */,
@@ -296,8 +299,7 @@
 		1D6FD63D2126AFB4005D0ADF /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				1D6FD61B21260B80005D0ADF /* DomainModel.swift */,
-				1D6FD61921260B46005D0ADF /* DataSources.swift */,
+				1D6FD61921260B46005D0ADF /* DataSourcesInterface.swift */,
 				1D6FD63F2126AFCA005D0ADF /* DataBase */,
 				1D6FD63E2126AFC4005D0ADF /* API */,
 			);
@@ -317,6 +319,7 @@
 		1D6FD63F2126AFCA005D0ADF /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
+				1DD66A112129641C00B04DD1 /* DatabaseModelInterface.swift */,
 				1DF04C09212888890095A931 /* MainDatabase.swift */,
 				1DF04C0B21288A050095A931 /* TransactionsDatabase */,
 			);
@@ -433,9 +436,25 @@
 			path = TransactionRepository;
 			sourceTree = "<group>";
 		};
+		1DD66A13212964D300B04DD1 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1DD66A142129656B00B04DD1 /* Transactions */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1DD66A142129656B00B04DD1 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
 		1DF04BE92128564A0095A931 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				1D6FD61B21260B80005D0ADF /* DomainModel.swift */,
 				1DD66A0A21295DC800B04DD1 /* TransactionRepository */,
 			);
 			path = Repositories;
@@ -783,10 +802,11 @@
 				1D6FD61621260940005D0ADF /* RepositoryErrors.swift in Sources */,
 				1DAAA0E121272D470043AC86 /* RealmManager.swift in Sources */,
 				1D6FD63C2126AE29005D0ADF /* NetworkService.swift in Sources */,
-				1D6FD61A21260B46005D0ADF /* DataSources.swift in Sources */,
+				1D6FD61A21260B46005D0ADF /* DataSourcesInterface.swift in Sources */,
 				1D6FD6362126AACC005D0ADF /* ModulesFactory.swift in Sources */,
 				1DF04BF6212862F80095A931 /* Currency.swift in Sources */,
 				1DF04BEC212856840095A931 /* TransactionListNetworkModel.swift in Sources */,
+				1DD66A122129641C00B04DD1 /* DatabaseModelInterface.swift in Sources */,
 				1D6FD6462126B3DD005D0ADF /* NetworkInterfaces.swift in Sources */,
 				1DAAA0DC212728170043AC86 /* NetworkErrors.swift in Sources */,
 				1D6FD6412126AFEF005D0ADF /* APIInterface.swift in Sources */,
