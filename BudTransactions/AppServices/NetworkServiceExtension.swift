@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 extension NetworkService {
 
   func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {

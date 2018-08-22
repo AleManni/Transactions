@@ -9,7 +9,7 @@
 import Foundation
 
 protocol TransactionsRepositoryInterface {
-  var api: TransactionsAPIInterface  { get }
+  var api: TransactionsAPIInterface { get }
   var database: TransactionsDatabaseInterface { get }
-  func getAllTransactions(completion: @escaping (OperationResult<[TransactionDomainModel]>) -> Void)
+  func getAllTransactions(completion: @escaping (OperationResult<(models: [TransactionDomainModel], error: Error?)>) -> Void)
 }

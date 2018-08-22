@@ -31,4 +31,3 @@ protocol NetworkClient {
   var configuration: URLSessionConfiguration { get set }
   func handleRequest(_ request: URLRequest, completion: @escaping (NetworkResult) -> Void)
 }
-

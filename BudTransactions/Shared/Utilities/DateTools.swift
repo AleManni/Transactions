@@ -23,6 +23,6 @@ final class DateTools {
     }
     let calendar = Calendar.current
     let components = calendar.dateComponents([.year, .month, .day], from: date)
-    return calendar.date(from:components)
+    return calendar.date(from: components)
   }
 }

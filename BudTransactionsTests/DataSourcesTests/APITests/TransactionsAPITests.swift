@@ -47,7 +47,7 @@ class TransactionsAPITests: XCTestCase {
         XCTAssertEqual(transactions.last?.id, "13acb877dc4d8030c5dacbdewfdge33d3496a2ae3c000db4c793bda9c3228baca1a28")
         XCTAssertEqual(transactions.last?.date.description(with: Locale(identifier: "en_US_POSIX")), "Thursday, March 1, 2018 at 12:00:00 AM Greenwich Mean Time")
         XCTAssertEqual(transactions.last?.description, "Dumplings legend")
-        XCTAssertEqual(transactions.last?.category, .eatOut)
+        XCTAssertEqual(transactions.last?.category, .restaurants)
         XCTAssertEqual(transactions.last?.currency, .gbp)
         XCTAssertEqual(transactions.last?.amount, 77.3)
         XCTAssertEqual(transactions.last?.product.id, 4279)

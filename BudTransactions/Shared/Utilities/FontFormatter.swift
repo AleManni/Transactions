@@ -223,4 +223,3 @@ extension FontFormatter {
     textView.font = textStyle.font.rawValue
   }
 }
-

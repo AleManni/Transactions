@@ -13,5 +13,17 @@ import Foundation
  */
 enum RepositoryErrors: Error {
   case noResult
+  case dataOutdated
 }
 
+extension RepositoryErrors: CustomStringConvertible {
+
+  public var description: String {
+    switch self {
+    case .noResult:
+      return "Connection error: no data available"
+    case .dataOutdated:
+      return "Connection error: the displayed data might not be up to date"
+    }
+  }
+}

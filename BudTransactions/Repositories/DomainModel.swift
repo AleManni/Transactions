@@ -13,4 +13,3 @@ public protocol DomainModel {
 
 extension Array: DomainModel {
 }
-

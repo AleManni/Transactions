@@ -14,6 +14,7 @@ import UIKit
 final class AppearanceService: AppService, ApplicationService {
   func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
     setupNavigationBar()
+    application.statusBarStyle = .lightContent
     return true
   }
 }
@@ -36,9 +37,10 @@ extension AppearanceService {
       ]
     }
     UINavigationBar.appearance().tintColor = .white
-    UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-    UINavigationBar.appearance().isTranslucent = true
-    UINavigationBar.appearance().shadowImage = UIImage()
+    UINavigationBar.appearance().barTintColor = BudColour.navyBlue.rawValue
+    UINavigationBar.appearance().isTranslucent = false
+    UINavigationBar.appearance().prefersLargeTitles = true
+
   }
 
   fileprivate func setupSearchBar() {

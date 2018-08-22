@@ -21,6 +21,7 @@ import Reachability
 
   func performsStartUpOperations() {
     setObserver()
+    navigationService?.setInitialView()
   }
 
   private func setObserver() {

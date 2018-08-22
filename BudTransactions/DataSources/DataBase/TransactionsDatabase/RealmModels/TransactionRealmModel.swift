@@ -18,7 +18,6 @@ final class TransactionRealmModel: Object {
   @objc dynamic var amount: Double = 0
   @objc dynamic var productId: Int = -1
 
-
   convenience init(id: String,
                    date: Date,
                    description: String,

@@ -22,8 +22,9 @@ final class TransactionsRepositoryTests: XCTestCase {
       switch result {
       case .failure:
         XCTFail()
-      case .success(let transactions):
+      case .success(let transactions, let error):
         XCTAssertEqual(transactions.count, 3)
+        XCTAssertNil(error)
       }
   })
   }
@@ -36,8 +37,9 @@ final class TransactionsRepositoryTests: XCTestCase {
       switch result {
       case .failure:
         XCTFail()
-      case .success(let transactions):
+      case .success(let transactions, let error):
         XCTAssertEqual(transactions.count, 3)
+        XCTAssertTrue(error is RepositoryErrors)
       }
     })
   }

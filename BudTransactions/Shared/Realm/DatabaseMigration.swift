@@ -6,7 +6,6 @@
 //  Copyright © 2018 Alessandro Manni. All rights reserved.
 //
 
-
 import Foundation
 import RealmSwift
 

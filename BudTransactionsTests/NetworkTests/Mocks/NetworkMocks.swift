@@ -43,7 +43,7 @@ class MockNetworkClient: NetworkClient {
 class MockImageNetworkClient: NetworkClient {
 
   lazy var expectedResult: NetworkResult = {
-    let image = UIImage(named: "image_placeholder")
+    let image = UIImage(named: "ic_placeholder")
     let data = UIImageJPEGRepresentation(image!, 1)
     return .success(data)
   }()

@@ -8,18 +8,20 @@
 
 import UIKit
 /**
- The ModulesFactory defines the requirement for the Factory class.
- The initialization method requires the arg repositories to inject a class of type CrowdscoresRepositories.
- Such class will provide the repositories used by the ModulesFactory implementation in order to initialise each Module.
- Concrete classes such as TransactionRepository can be used to feed production VS mock data to the UI
+ The ModulesFactory operates as a VIPER wireframe.
+ The initialization method allows to inject a class conforming to BudRepositories that provides concrete repositories implementations to the ModulesFactory.
+ Such class will provide the repositories used by the ModulesFactory implementation in order to build each Module.
+ Upon implementing UI Tests, a class such as TestRepository can be used to feed mock data to the app
  */
 
 protocol BudRepositories {
-  //  var TransactionRepository { get } // uncomment when ready
+  var transactionsRepository: TransactionsRepositoryInterface { get }
 }
 
 final class ProductionRepositories: BudRepositories {
-  //TODO: Add here the Transaction Repo
+  var transactionsRepository: TransactionsRepositoryInterface =
+    TransactionsRepository(api: TransactionsAPI(NetworkService.safeSession),
+                           database: TransactionsDatabase())
 }
 
 final class ModulesFactory {

@@ -56,7 +56,7 @@ final class TransactionsDatabaseTests: XCTestCase {
       XCTAssertEqual(transactionModels.count, 3)
 
       XCTAssertEqual(transactionModels.first?.id, "testId1")
-      XCTAssertEqual(transactionModels.first?.date, Date(timeIntervalSinceReferenceDate: 1))
+      XCTAssertNotNil(transactionModels.first?.date)
       XCTAssertEqual(transactionModels.first?.description, "test description one")
       XCTAssertEqual(transactionModels.first?.category, .entertainment)
       XCTAssertEqual(transactionModels.first?.currency, .gbp)
@@ -66,9 +66,9 @@ final class TransactionsDatabaseTests: XCTestCase {
       XCTAssertEqual(transactionModels.first?.product.iconURLString, "www.test.com")
 
       XCTAssertEqual(transactionModels[1].id, "testId2")
-      XCTAssertEqual(transactionModels[1].date, Date(timeIntervalSinceReferenceDate: 1))
+      XCTAssertNotNil(transactionModels[1].date)
       XCTAssertEqual(transactionModels[1].description, "test description two")
-      XCTAssertEqual(transactionModels[1].category, .eatOut)
+      XCTAssertEqual(transactionModels[1].category, .takeaway)
       XCTAssertEqual(transactionModels[1].currency, .gbp)
       XCTAssertEqual(transactionModels[1].amount, 20)
       XCTAssertEqual(transactionModels[1].product.id, 1)
@@ -76,7 +76,7 @@ final class TransactionsDatabaseTests: XCTestCase {
       XCTAssertEqual(transactionModels[1].product.iconURLString, "www.test.com")
 
       XCTAssertEqual(transactionModels[2].id, "testId3")
-      XCTAssertEqual(transactionModels[2].date, Date(timeIntervalSinceReferenceDate: 1))
+      XCTAssertNotNil(transactionModels[2].date)
       XCTAssertEqual(transactionModels[2].description, "test description three")
       XCTAssertEqual(transactionModels[2].category, .utilities)
       XCTAssertEqual(transactionModels[2].currency, .gbp)

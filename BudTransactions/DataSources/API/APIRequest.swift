@@ -6,7 +6,6 @@
 //  Copyright © 2018 Alessandro Manni. All rights reserved.
 //
 
-
 import Foundation
 
 /**This struct provides an optional URLRequest to be used for network requests.
@@ -177,4 +176,3 @@ public enum APIRequestError: Error, CustomStringConvertible {
   }
 
 }
-

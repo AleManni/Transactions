@@ -28,13 +28,7 @@ final class DefaultNetworkClient: NetworkClient {
         completion(.success(nil))
         return
       }
-      do {
-        let swiftCollection = try JSONSerialization.jsonObject(with: responseData, options: .allowFragments)
-        completion(.success(swiftCollection))
-      } catch let error {
-        completion(.failure(NetworkErrors.jsonDeserializationError(error)))
-        return
-      }
+        completion(.success(responseData))
     })
     task.resume()
   }

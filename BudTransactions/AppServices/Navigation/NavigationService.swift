@@ -10,9 +10,8 @@ import Foundation
 import UIKit
 
 /**
- In the current model, this class is in charge of:
- 1. setting the navigation controllers and associated VCs at start up
- 2. managing transitions between views
+ This class operates as a central Router for the VIPER module.
+ Individual extensions conforms to the Router protocols of the different modules.
  */
 final class NavigationService {
 
@@ -55,17 +54,15 @@ final class NavigationService {
     }
   }()
 
-  // MARK: RootViewController
-
-  lazy var transactionViewController: UIViewController = {
-    return UIViewController(nibName: nil, bundle: nil) // TODO: Mock implementation to be replaced with the actual screen
-  }()
-
   // MARK: Initialisation
   init(viewControllersFactory: ModulesFactory) {
     self.factory = viewControllersFactory
   }
 
+  func setInitialView() {
+    window.rootViewController = navigationController
+    showTransactionNavigation()
+  }
 
   // MARK: INTERNAL FUNCTIONS
   // MARK: Private utilities

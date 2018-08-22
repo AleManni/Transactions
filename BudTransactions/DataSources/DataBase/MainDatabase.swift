@@ -9,7 +9,6 @@
 import Foundation
 import RealmSwift
 
-
 class MainDatabase: DataSource {
   func write(_ object: Object, shouldUpdateIfExists: Bool) {
     autoreleasepool {
@@ -69,7 +68,7 @@ class MainDatabase: DataSource {
   }
 
   func object<T: Object, K>(ofType type: T.Type, primaryKey: K) -> T? {
-    var object: T? = nil
+    var object: T?
 
     autoreleasepool {
       do {
