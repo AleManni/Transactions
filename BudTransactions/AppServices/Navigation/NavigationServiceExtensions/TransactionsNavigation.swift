@@ -11,7 +11,7 @@ import UIKit
 
 extension NavigationService {
 /*
-   Sets the initial module for the app
+   Sets the initial module for the app (as such this class doesn't comform to a routing protocol)
  */
   func showTransactionNavigation() {
     let transactionViewController = factory.buildTransactionsView(router: self)

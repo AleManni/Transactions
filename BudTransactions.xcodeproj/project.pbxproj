@@ -396,9 +396,9 @@
 		1D6FD60F21260802005D0ADF /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				1DF04BF4212862EB0095A931 /* PublicEnums */,
 				1D02F9F7212D375600A23CF9 /* Constants */,
 				1D028914212B474C007964B9 /* UIElements */,
-				1DF04BF4212862EB0095A931 /* Entities */,
 				1D6FD6422126B1C5005D0ADF /* Network */,
 				1DAAA0DF21272D0B0043AC86 /* Realm */,
 				1D6FD62221260D1C005D0ADF /* Utilities */,
@@ -676,13 +676,13 @@
 			path = TransactionsAPI;
 			sourceTree = "<group>";
 		};
-		1DF04BF4212862EB0095A931 /* Entities */ = {
+		1DF04BF4212862EB0095A931 /* PublicEnums */ = {
 			isa = PBXGroup;
 			children = (
 				1DF04BF5212862F80095A931 /* Currency.swift */,
 				1DF04BF921286CDF0095A931 /* ProductCategory.swift */,
 			);
-			path = Entities;
+			path = PublicEnums;
 			sourceTree = "<group>";
 		};
 		1DF04BFB212872BE0095A931 /* DataSourcesTests */ = {

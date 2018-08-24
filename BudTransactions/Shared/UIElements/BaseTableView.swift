@@ -12,7 +12,9 @@ import UIKit
 protocol BaseTableViewRefreshDelegate: class {
   func didPullToRefresh()
 }
-
+/**
+ Provides a table view instantiated with a placeholder and a refresh controller
+ */
 class BaseTableView: UITableView {
   let placeholder: PlaceHolderView?
   weak var refreshDelegate: BaseTableViewRefreshDelegate?

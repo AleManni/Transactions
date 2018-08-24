@@ -11,6 +11,9 @@ import UIKit
 
 extension NetworkService {
 
+  /**
+    Sets the initial configurations for the NetowrkService class
+   */
   func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     NetworkService.safeSession.configureService()
     NetworkService.cachedSession.configureService()
