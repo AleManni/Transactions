@@ -40,30 +40,5 @@ extension AppearanceService {
     UINavigationBar.appearance().barTintColor = BudColour.navyBlue.rawValue
     UINavigationBar.appearance().isTranslucent = false
     UINavigationBar.appearance().prefersLargeTitles = true
-
-  }
-
-  fileprivate func setupSearchBar() {
-    if #available(iOS 11, *) {
-      let textAttributes: [String: Any] = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.white]
-      let placeholderAttributes: [NSAttributedStringKey: Any] = [NSAttributedStringKey.foregroundColor: UIColor.white]
-      let placeholderText = "Search"
-
-      UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = textAttributes
-      UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).attributedPlaceholder = NSAttributedString(string: placeholderText,
-                                                                                                                        attributes: placeholderAttributes)
-    }
-  }
-}
-
-// MARK: UIBarButtonItem
-
-extension AppearanceService {
-  fileprivate func setupBarButtonItem() {
-    let attributes = [
-      NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14.0, weight: .light)
-    ]
-
-    UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).setTitleTextAttributes(attributes, for: .normal)
   }
 }

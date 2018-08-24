@@ -64,8 +64,7 @@ final class NavigationService {
     showTransactionNavigation()
   }
 
-  // MARK: INTERNAL FUNCTIONS
-  // MARK: Private utilities
+  // MARK: Private Utilities
   func showController(_ controller: UIViewController) {
     presenter?.pushViewController(controller, animated: true)
     controller.loadViewIfNeeded()

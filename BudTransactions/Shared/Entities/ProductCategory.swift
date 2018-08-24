@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public enum TransactionCategory: Int {
   case entertainment = 0
@@ -18,7 +19,7 @@ public enum TransactionCategory: Int {
   var iconName: String {
     switch self {
     case .entertainment:
-      return "ic_entertaintment"
+      return "ic_entertainment"
     case .utilities:
       return "ic_utilities"
     case .restaurants:
@@ -43,5 +44,21 @@ public enum TransactionCategory: Int {
     case .grocery:
       return "groceries"
     }
+  }
+
+  var associatedColour: UIColor {
+    switch self {
+    case .entertainment:
+      return BudColour.navyBlue.rawValue
+    case .utilities:
+      return BudColour.purple.rawValue
+    case .restaurants:
+      return BudColour.red.rawValue
+    case .takeaway:
+      return BudColour.lightBlue.rawValue
+    case .grocery:
+      return BudColour.green.rawValue
+    }
+
   }
 }

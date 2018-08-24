@@ -17,26 +17,33 @@ final class TransactionsPresenter: TransactionsInteractorOutput {
   var transactions: [TransactionDomainModel] = []
   var error: Error?
 
+  var warning: String? = nil {
+    didSet {
+      if oldValue != warning {
+        view?.displayWarning(warning)
+      }
+    }
+  }
+
   lazy var dateFormatter: DateFormatter = {
     let formatter = DateFormatter()
-    formatter.dateFormat = "EEEE, MMM d"
+    formatter.dateFormat = "EEEE, d MMM"
     return formatter
   }()
 
   func fetched(result: OperationResult<(models: [TransactionDomainModel], error: Error?)>) {
+    view?.isLoading(false)
     switch result {
     case .failure(let error):
-      view?.showErrorDescription(errorDescription(error) ?? "")
+      warning = errorDescription(error) ?? ""
     case .success((let transactions, let error)):
       self.transactions = transactions
       let representableList = generateRepresentables(models: transactions)
-      view?.showTransactions(transactions: representableList, warning: errorDescription(error))
+      view?.showTransactions(transactions: representableList)
+      warning = errorDescription(error)
     }
   }
 
-  /*
-   This function
- */
   private func generateRepresentables(models: [TransactionDomainModel]) -> TransactionsListRepresentable {
     let tuples: [(Date, [TransactionRepresentable])] = Dictionary.init(grouping: transactions, by: { $0.date })
       .mapValues { $0.compactMap { TransactionRepresentable(model: $0) }}
@@ -60,13 +67,21 @@ final class TransactionsPresenter: TransactionsInteractorOutput {
     }
     return error.description
   }
+
 }
 
   extension TransactionsPresenter: TransactionsPresenterInput {
 
   func updateView() {
+    if transactions.isEmpty {
+      view?.isLoading(true)
+    }
     interactor?.fetchTransactions()
   }
+
+    func viewDidReceiveReachabilityWarning(_ warning: String?) {
+      self.warning = warning
+    }
 
   func showDetailsForTransaction(id: String) {
     guard let model = transactions.first(where: { $0.id == id }) else {

@@ -11,7 +11,7 @@ import UIKit
 
 extension UIImageView {
 
-  func setImageWithURLString(_ string: String, placeholder: UIImage) {
+  func setImageWithURLString(_ string: String, placeholder: UIImage?) {
     self.image = placeholder
     ImageDownloader.shared.downloadImage(string, completion: { image in
       guard let image = image else {

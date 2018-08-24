@@ -30,6 +30,7 @@ final class TransactionsTableView: BaseTableView {
     rowHeight = 50
     register(TransactionsTableCell.self, forCellReuseIdentifier: TransactionsTableCell.identifier)
     register(TransactionsSectionsHeader.self, forHeaderFooterViewReuseIdentifier: TransactionsSectionsHeader.identifier)
+    tableFooterView = UIView()
     self.dataSource = self
     self.delegate = self
   }
@@ -61,6 +62,7 @@ extension TransactionsTableView: UITableViewDataSource {
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
     return representableList?[safe: section]?.title
   }
+
 }
 
 extension TransactionsTableView: UITableViewDelegate {

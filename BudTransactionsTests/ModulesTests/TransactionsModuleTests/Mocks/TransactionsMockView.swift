@@ -13,14 +13,18 @@ final class TransactionsMockView: TransactionsViewInterface {
 
   var representable: TransactionsListRepresentable?
   var warning: String?
-  var errorDescription: String?
+  var warningCounter = 0
 
-  func showTransactions(transactions: TransactionsListRepresentable, warning: String?) {
+  func showTransactions(transactions: TransactionsListRepresentable) {
     self.representable = transactions
-    self.warning = warning
   }
 
-  func showErrorDescription(_ description: String) {
-    self.errorDescription = description
+  func isLoading(_ isLoading: Bool) {
+    // empty
+  }
+
+  func displayWarning(_ warning: String?) {
+    self.warning = warning
+    warningCounter += 1
   }
 }

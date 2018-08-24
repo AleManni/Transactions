@@ -17,22 +17,12 @@ struct TransactionRepresentable: Representable {
 
   init?(model: DomainModel?...) {
     guard let model = model.first(where: { $0 is TransactionDomainModel }) as? TransactionDomainModel,
-    let amountString =  TransactionRepresentable.format(value: model.amount, currencyCode: model.currency.rawValue) else {
+    let amountString =  CurrencyFormatter.stringRepresentation(for: model.amount, currency: model.currency)  else {
       return nil
     }
     self.id = model.id
     self.iconName = model.category.iconName
     self.title = model.description
     self.amount = amountString
-  }
-}
-
-// MARK: Utility
-extension TransactionRepresentable {
-  private static func format(value: Double, currencyCode: String) -> String? {
-    let formatter = NumberFormatter()
-    formatter.numberStyle = .currency
-    formatter.currencyCode = currencyCode
-    return formatter.string(from: NSNumber(value: value))
   }
 }

@@ -28,7 +28,7 @@ final class  TransactionsTableCell: UITableViewCell {
     let view = UIImageView()
     view.contentMode = .scaleAspectFit
     view.layer.cornerRadius = 5
-    view.clipsToBounds = true
+    view.layer.masksToBounds = true
     return view
   }()
 

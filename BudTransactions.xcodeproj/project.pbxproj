@@ -19,6 +19,16 @@
 		1D028926212B77D1007964B9 /* TransactionsNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D028925212B77D1007964B9 /* TransactionsNavigation.swift */; };
 		1D02F9F9212D377900A23CF9 /* BudKeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02F9F8212D377900A23CF9 /* BudKeyChain.swift */; };
 		1D02F9FB212D466200A23CF9 /* TransactionDetailsNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02F9FA212D466200A23CF9 /* TransactionDetailsNavigation.swift */; };
+		1D02FA00212D701D00A23CF9 /* TransactionDetailsInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02F9FF212D701D00A23CF9 /* TransactionDetailsInterfaces.swift */; };
+		1D02FA02212D70B900A23CF9 /* TransactionDetailsRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02FA01212D70B900A23CF9 /* TransactionDetailsRepresentable.swift */; };
+		1D02FA06212D74B800A23CF9 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02FA05212D74B800A23CF9 /* CurrencyFormatter.swift */; };
+		1D02FA08212D7D4300A23CF9 /* TransactionDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02FA07212D7D4300A23CF9 /* TransactionDetailsPresenter.swift */; };
+		1D02FA0B212D7F2600A23CF9 /* TransactionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02FA0A212D7F2600A23CF9 /* TransactionDetailsViewController.swift */; };
+		1D02FA0D212D804B00A23CF9 /* TransactionDetailsModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02FA0C212D804B00A23CF9 /* TransactionDetailsModuleFactory.swift */; };
+		1D02FA0F212D81D900A23CF9 /* TransactionDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02FA0E212D81D900A23CF9 /* TransactionDetailsInteractor.swift */; };
+		1D02FA11212DAA3E00A23CF9 /* TransactionDetailsTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02FA10212DAA3E00A23CF9 /* TransactionDetailsTopView.swift */; };
+		1D02FA13212DB4EB00A23CF9 /* TransactionDetailsBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02FA12212DB4EB00A23CF9 /* TransactionDetailsBottomView.swift */; };
+		1D02FA15212DDD9300A23CF9 /* ReachabilityResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02FA14212DDD9300A23CF9 /* ReachabilityResponder.swift */; };
 		1D3979EF2129CD6C00CF66F7 /* Representable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3979EE2129CD6C00CF66F7 /* Representable.swift */; };
 		1D3979F12129DAE900CF66F7 /* TransactionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3979F02129DAE900CF66F7 /* TransactionsPresenter.swift */; };
 		1D3979F32129F15C00CF66F7 /* TransactionsListRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3979F22129F15C00CF66F7 /* TransactionsListRepresentable.swift */; };
@@ -61,6 +71,8 @@
 		1DAAA0E9212771E80043AC86 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAAA0E8212771E80043AC86 /* ImageDownloader.swift */; };
 		1DAAA0EE212776C10043AC86 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAAA0ED212776C10043AC86 /* NetworkServiceTests.swift */; };
 		1DAAA0F12127775A0043AC86 /* NetworkMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAAA0F02127775A0043AC86 /* NetworkMocks.swift */; };
+		1DB5C1D5212F4065004726C2 /* TransactionDetailsMockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB5C1D4212F4065004726C2 /* TransactionDetailsMockView.swift */; };
+		1DB5C1D7212F40D1004726C2 /* TransactionDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB5C1D6212F40D1004726C2 /* TransactionDetailsPresenterTests.swift */; };
 		1DD669FD21293DE500B04DD1 /* TransactionsDatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD669FC21293DE500B04DD1 /* TransactionsDatabaseTests.swift */; };
 		1DD66A0021293F2A00B04DD1 /* MockTransactionDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD669FF21293F2A00B04DD1 /* MockTransactionDomainModel.swift */; };
 		1DD66A0221294EA500B04DD1 /* TransactionsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD66A0121294EA400B04DD1 /* TransactionsRepository.swift */; };
@@ -119,6 +131,17 @@
 		1D028925212B77D1007964B9 /* TransactionsNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsNavigation.swift; sourceTree = "<group>"; };
 		1D02F9F8212D377900A23CF9 /* BudKeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudKeyChain.swift; sourceTree = "<group>"; };
 		1D02F9FA212D466200A23CF9 /* TransactionDetailsNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsNavigation.swift; sourceTree = "<group>"; };
+		1D02F9FF212D701D00A23CF9 /* TransactionDetailsInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsInterfaces.swift; sourceTree = "<group>"; };
+		1D02FA01212D70B900A23CF9 /* TransactionDetailsRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsRepresentable.swift; sourceTree = "<group>"; };
+		1D02FA05212D74B800A23CF9 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		1D02FA07212D7D4300A23CF9 /* TransactionDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsPresenter.swift; sourceTree = "<group>"; };
+		1D02FA0A212D7F2600A23CF9 /* TransactionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsViewController.swift; sourceTree = "<group>"; };
+		1D02FA0C212D804B00A23CF9 /* TransactionDetailsModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsModuleFactory.swift; sourceTree = "<group>"; };
+		1D02FA0E212D81D900A23CF9 /* TransactionDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsInteractor.swift; sourceTree = "<group>"; };
+		1D02FA10212DAA3E00A23CF9 /* TransactionDetailsTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsTopView.swift; sourceTree = "<group>"; };
+		1D02FA12212DB4EB00A23CF9 /* TransactionDetailsBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsBottomView.swift; sourceTree = "<group>"; };
+		1D02FA14212DDD9300A23CF9 /* ReachabilityResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityResponder.swift; sourceTree = "<group>"; };
+		1D02FA16212DE40300A23CF9 /* ReachabilityErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityErrors.swift; sourceTree = "<group>"; };
 		1D3979EE2129CD6C00CF66F7 /* Representable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Representable.swift; sourceTree = "<group>"; };
 		1D3979F02129DAE900CF66F7 /* TransactionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsPresenter.swift; sourceTree = "<group>"; };
 		1D3979F22129F15C00CF66F7 /* TransactionsListRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsListRepresentable.swift; sourceTree = "<group>"; };
@@ -165,6 +188,8 @@
 		1DAAA0E8212771E80043AC86 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		1DAAA0ED212776C10043AC86 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		1DAAA0F02127775A0043AC86 /* NetworkMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkMocks.swift; sourceTree = "<group>"; };
+		1DB5C1D4212F4065004726C2 /* TransactionDetailsMockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsMockView.swift; sourceTree = "<group>"; };
+		1DB5C1D6212F40D1004726C2 /* TransactionDetailsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsPresenterTests.swift; sourceTree = "<group>"; };
 		1DD669FC21293DE500B04DD1 /* TransactionsDatabaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsDatabaseTests.swift; sourceTree = "<group>"; };
 		1DD669FF21293F2A00B04DD1 /* MockTransactionDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionDomainModel.swift; sourceTree = "<group>"; };
 		1DD66A0121294EA400B04DD1 /* TransactionsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsRepository.swift; sourceTree = "<group>"; };
@@ -239,6 +264,7 @@
 				1D028915212B475C007964B9 /* BaseTableView.swift */,
 				1D028917212B47FB007964B9 /* PlaceholderView.swift */,
 				1D028919212B4C99007964B9 /* ErrorBannerView.swift */,
+				1D02FA14212DDD9300A23CF9 /* ReachabilityResponder.swift */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
@@ -247,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				1D028922212B740D007964B9 /* TransactionsModuleFactory.swift */,
+				1D02FA0C212D804B00A23CF9 /* TransactionDetailsModuleFactory.swift */,
 			);
 			path = ModulesFactoryExtensions;
 			sourceTree = "<group>";
@@ -269,10 +296,33 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		1D02F9FE212D6FF400A23CF9 /* TransactionDetail */ = {
+			isa = PBXGroup;
+			children = (
+				1D02F9FF212D701D00A23CF9 /* TransactionDetailsInterfaces.swift */,
+				1D02FA07212D7D4300A23CF9 /* TransactionDetailsPresenter.swift */,
+				1D02FA0E212D81D900A23CF9 /* TransactionDetailsInteractor.swift */,
+				1D02FA01212D70B900A23CF9 /* TransactionDetailsRepresentable.swift */,
+				1D02FA09212D7EDA00A23CF9 /* View */,
+			);
+			path = TransactionDetail;
+			sourceTree = "<group>";
+		};
+		1D02FA09212D7EDA00A23CF9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D02FA0A212D7F2600A23CF9 /* TransactionDetailsViewController.swift */,
+				1D02FA10212DAA3E00A23CF9 /* TransactionDetailsTopView.swift */,
+				1D02FA12212DB4EB00A23CF9 /* TransactionDetailsBottomView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1D3979F4212A18B500CF66F7 /* ModulesTests */ = {
 			isa = PBXGroup;
 			children = (
 				1D3979F5212A18C000CF66F7 /* TransactionsModuleTests */,
+				1DB5C1D2212F3F96004726C2 /* TransactionDetailsModuleTests */,
 			);
 			path = ModulesTests;
 			sourceTree = "<group>";
@@ -363,6 +413,7 @@
 			isa = PBXGroup;
 			children = (
 				1DAAA0DB212728170043AC86 /* NetworkErrors.swift */,
+				1D02FA16212DE40300A23CF9 /* ReachabilityErrors.swift */,
 				1D6FD61321260906005D0ADF /* APIErrors.swift */,
 				1D6FD61521260940005D0ADF /* RepositoryErrors.swift */,
 			);
@@ -386,6 +437,7 @@
 				1D6FD62321260D3A005D0ADF /* FontFormatter.swift */,
 				1DAAA0DD212728A60043AC86 /* DebugLog.swift */,
 				1DF04BF721286B2A0095A931 /* DateTools.swift */,
+				1D02FA05212D74B800A23CF9 /* CurrencyFormatter.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -511,6 +563,23 @@
 			path = APIImplementations;
 			sourceTree = "<group>";
 		};
+		1DB5C1D2212F3F96004726C2 /* TransactionDetailsModuleTests */ = {
+			isa = PBXGroup;
+			children = (
+				1DB5C1D3212F4049004726C2 /* Mocks */,
+				1DB5C1D6212F40D1004726C2 /* TransactionDetailsPresenterTests.swift */,
+			);
+			path = TransactionDetailsModuleTests;
+			sourceTree = "<group>";
+		};
+		1DB5C1D3212F4049004726C2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				1DB5C1D4212F4065004726C2 /* TransactionDetailsMockView.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		1DD669FA21293DA600B04DD1 /* RepositoriesTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -561,6 +630,7 @@
 			children = (
 				1D3979EE2129CD6C00CF66F7 /* Representable.swift */,
 				1DD66A142129656B00B04DD1 /* Transactions */,
+				1D02F9FE212D6FF400A23CF9 /* TransactionDetail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -917,6 +987,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D02FA02212D70B900A23CF9 /* TransactionDetailsRepresentable.swift in Sources */,
 				1D6FD61C21260B80005D0ADF /* DomainModel.swift in Sources */,
 				1DD66A062129509900B04DD1 /* TransactionsAPIInterface.swift in Sources */,
 				1D6FD6382126AD53005D0ADF /* AppearanceService.swift in Sources */,
@@ -924,7 +995,9 @@
 				1D02891C212B5581007964B9 /* TransactionsSectionsHeader.swift in Sources */,
 				1DAAA0E9212771E80043AC86 /* ImageDownloader.swift in Sources */,
 				1D3979F32129F15C00CF66F7 /* TransactionsListRepresentable.swift in Sources */,
+				1D02FA00212D701D00A23CF9 /* TransactionDetailsInterfaces.swift in Sources */,
 				1DAAA0DE212728A60043AC86 /* DebugLog.swift in Sources */,
+				1D02FA0F212D81D900A23CF9 /* TransactionDetailsInteractor.swift in Sources */,
 				1D6FD62B2126A9F3005D0ADF /* AppService.swift in Sources */,
 				1D3979F12129DAE900CF66F7 /* TransactionsPresenter.swift in Sources */,
 				1D6FD618212609B0005D0ADF /* OperationResult.swift in Sources */,
@@ -934,13 +1007,18 @@
 				1DAAA0E5212758390043AC86 /* EphemeralNetworkConfigurator.swift in Sources */,
 				1D6FD6342126AAC2005D0ADF /* NavigationService.swift in Sources */,
 				1D6FD6442126B1F8005D0ADF /* CachingNetworkConfigurator.swift in Sources */,
+				1D02FA06212D74B800A23CF9 /* CurrencyFormatter.swift in Sources */,
 				1D028918212B47FB007964B9 /* PlaceholderView.swift in Sources */,
 				1D028911212B4634007964B9 /* TransactionsViewController.swift in Sources */,
+				1D02FA08212D7D4300A23CF9 /* TransactionDetailsPresenter.swift in Sources */,
 				1DF04BF3212862040095A931 /* ProductDomainModel.swift in Sources */,
 				1D02891E212B5EAE007964B9 /* TransactionsTableCell.swift in Sources */,
 				1DD66A042129500D00B04DD1 /* TransactionsDatabaseInterface.swift in Sources */,
 				1D02F9FB212D466200A23CF9 /* TransactionDetailsNavigation.swift in Sources */,
+				1D02FA11212DAA3E00A23CF9 /* TransactionDetailsTopView.swift in Sources */,
 				1D7C388A2126B5B900B8B3C6 /* DefaultNetworkClient.swift in Sources */,
+				1D02FA0D212D804B00A23CF9 /* TransactionDetailsModuleFactory.swift in Sources */,
+				1D02FA0B212D7F2600A23CF9 /* TransactionDetailsViewController.swift in Sources */,
 				1D028920212B7144007964B9 /* CollectionExtensions.swift in Sources */,
 				1D6FD62121260C85005D0ADF /* StringExtensions.swift in Sources */,
 				1DD66A1621296BBB00B04DD1 /* TrasactionsInterfaces.swift in Sources */,
@@ -953,11 +1031,13 @@
 				1DD66A1821296D0700B04DD1 /* TransactionsInteractor.swift in Sources */,
 				1DD66A1A2129702700B04DD1 /* TransactionRepresentable.swift in Sources */,
 				1D6FD6482126B46E005D0ADF /* NetworkServiceExtension.swift in Sources */,
+				1D02FA15212DDD9300A23CF9 /* ReachabilityResponder.swift in Sources */,
 				1D3979EF2129CD6C00CF66F7 /* Representable.swift in Sources */,
 				1D6FD61621260940005D0ADF /* RepositoryErrors.swift in Sources */,
 				1DAAA0E121272D470043AC86 /* RealmManager.swift in Sources */,
 				1D028916212B475C007964B9 /* BaseTableView.swift in Sources */,
 				1D6FD63C2126AE29005D0ADF /* NetworkService.swift in Sources */,
+				1D02FA13212DB4EB00A23CF9 /* TransactionDetailsBottomView.swift in Sources */,
 				1D6FD61A21260B46005D0ADF /* DataSourcesInterface.swift in Sources */,
 				1D6FD6362126AACC005D0ADF /* ModulesFactory.swift in Sources */,
 				1DF04BF6212862F80095A931 /* Currency.swift in Sources */,
@@ -995,9 +1075,11 @@
 				1DAAA0F12127775A0043AC86 /* NetworkMocks.swift in Sources */,
 				1DF04C082128834B0095A931 /* TransactionListNetworkModelTests.swift in Sources */,
 				1DAAA0EE212776C10043AC86 /* NetworkServiceTests.swift in Sources */,
+				1DB5C1D5212F4065004726C2 /* TransactionDetailsMockView.swift in Sources */,
 				1DD66A0021293F2A00B04DD1 /* MockTransactionDomainModel.swift in Sources */,
 				1D3979FA212A1BE700CF66F7 /* TransactionsMockView.swift in Sources */,
 				1DD66A0E212962E400B04DD1 /* MockTransactionsAPI.swift in Sources */,
+				1DB5C1D7212F40D1004726C2 /* TransactionDetailsPresenterTests.swift in Sources */,
 				1D3979F7212A18E100CF66F7 /* TransactionsPresenterTests.swift in Sources */,
 				1DD669FD21293DE500B04DD1 /* TransactionsDatabaseTests.swift in Sources */,
 				1DF04BE8212852980095A931 /* ImageDownloaderTests.swift in Sources */,

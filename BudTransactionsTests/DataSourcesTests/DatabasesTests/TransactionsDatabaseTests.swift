@@ -17,7 +17,15 @@ final class TransactionsDatabaseTests: XCTestCase {
 
   override func setUp() {
     super.setUp()
-    Realm.Configuration.defaultConfiguration.inMemoryIdentifier = self.name
+    RealmManager().setTestRealm(as: self.description)
+  }
+
+  override func tearDown() {
+    super.tearDown()
+    let realm = try! Realm()
+    try! realm.write {
+      realm.deleteAll()
+    }
   }
 
   func testSaveATransactions() {
@@ -31,8 +39,10 @@ final class TransactionsDatabaseTests: XCTestCase {
         XCTFail()
         return
       }
+      // Change test and get back individual transactions
       let transactions = self.database.objects(ofType: TransactionRealmModel.self)
       let products = self.database.objects(ofType: ProductRealmModel.self)
+      print(transactions)
       XCTAssertEqual(transactions.count, 3)
       XCTAssertEqual(products.count, 2)
       expect.fulfill()

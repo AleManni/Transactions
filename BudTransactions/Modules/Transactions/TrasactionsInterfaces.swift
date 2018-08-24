@@ -17,13 +17,15 @@ protocol TransactionsInteractorOutput: class {
 }
 
 protocol TransactionsViewInterface: class {
-  func showTransactions(transactions: TransactionsListRepresentable, warning: String?)
-  func showErrorDescription(_ description: String)
+  func showTransactions(transactions: TransactionsListRepresentable)
+  func isLoading(_ isLoading: Bool)
+  func displayWarning(_ warning: String?)
 }
 
 protocol TransactionsPresenterInput: class {
   func updateView()
   func showDetailsForTransaction(id: String)
+  func viewDidReceiveReachabilityWarning(_ warning: String?)
 }
 
 protocol TransactionsRouter: class {

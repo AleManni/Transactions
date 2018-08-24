@@ -44,10 +44,9 @@ public enum FontStyle {
   case subtitleSmallRegular
   case subtitleVerySmallRegular
   case subtitleVerySmallMedium
-  case subtitleVerySmallSemibold
   case subtitleVerySmallBold
-  case subtitleSmallMedium
-  case buttonLargeBold
+  case largeRegular
+  case largeBold
   case navigation
   case custom(UIFont)
 
@@ -103,20 +102,18 @@ public enum FontStyle {
       return .systemFont(ofSize: 15.0, weight: .bold)
     case .subtitleMedium:
       return .systemFont(ofSize: 15.0, weight: .medium)
-    case .subtitleSmallMedium:
-      return .systemFont(ofSize: 13.0, weight: .medium)
     case .subtitleSmallRegular:
       return .systemFont(ofSize: 13.0, weight: .regular)
     case .subtitleVerySmallRegular:
       return .systemFont(ofSize: 11.0, weight: .regular)
     case .subtitleVerySmallMedium:
       return .systemFont(ofSize: 11.0, weight: .medium)
-    case .subtitleVerySmallSemibold:
-      return .systemFont(ofSize: 11.0, weight: .semibold)
     case .subtitleVerySmallBold:
       return .systemFont(ofSize: 11.0, weight: .bold)
-    case .buttonLargeBold:
-      return .systemFont(ofSize: 17.0, weight: .bold)
+    case .largeRegular:
+      return .systemFont(ofSize: 18.0, weight: .bold)
+    case .largeBold:
+      return .systemFont(ofSize: 22.0, weight: .bold)
     case .navigation:
       if #available(iOS 11, *) {
         return .systemFont(ofSize: 17.0, weight: .semibold)

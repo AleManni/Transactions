@@ -10,7 +10,8 @@ import Foundation
 
 extension NavigationService: TransactionsRouter {
   func didRequestDetailsFor(transaction: TransactionDomainModel) {
-
+   let view = factory.buildTransactionsDetailsView(data: transaction)
+    showController(view)
   }
 
 }

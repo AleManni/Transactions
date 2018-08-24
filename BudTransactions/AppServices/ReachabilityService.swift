@@ -15,7 +15,7 @@ final class ReachabilityService: AppService, ApplicationService {
   static let shared = ReachabilityService()
 
   var isReachable: Bool {
-    return reachability?.connection != nil
+    return reachability?.connection != .none
   }
 
   lazy var reachability: Reachability? = {

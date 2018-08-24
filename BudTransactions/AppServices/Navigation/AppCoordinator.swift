@@ -31,15 +31,13 @@ import Reachability
   // MARK: - Notifications handling
 
   @objc private func reachabilityChanged(note: Notification) {
-    if let reachability = note.object as? Reachability {
-      switch reachability.connection {
-      case .none:
-        // DO SOMETHING! - eg. send a Notification or delegate into the Navigation Service
-        break
-      default:
-         // DO SOMETHING! - eg. send a Notification or delegate into the Navigation Service
-        break
-      }
+      if let controller = navigationService?.currentViewController as? ReachabilityResponder {
+        switch ReachabilityService.shared.isReachable {
+        case true:
+        controller.networkChangedStatus(isAvailable: true, info: nil)
+        case false:
+          controller.networkChangedStatus(isAvailable: false, info: "Network not available!")
+        }
     }
   }
 

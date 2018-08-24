@@ -33,10 +33,10 @@ final class TransactionsRepository: TransactionsRepositoryInterface {
         completion(.success((models: transactions, nil)))
       case .failure(let error):
         // fold back to db if we have some data
-         let transactions = self.database.getAllTransactions()
-         if transactions.count > 0 {
-        completion(.success((self.database.getAllTransactions(), RepositoryErrors.dataOutdated)))
-         } else {
+        let transactions = self.database.getAllTransactions()
+        if transactions.count > 0 {
+          completion(.success((self.database.getAllTransactions(), RepositoryErrors.dataOutdated)))
+        } else {
           completion(.failure(error))
         }
       }

@@ -41,6 +41,19 @@ final class RealmManager: NSObject {
     Realm.Configuration.defaultConfiguration = encryptionConfig
   }
 
+  func setTestRealm(as inMemoryIdentifier: String) {
+    let testConfiguration = Realm.Configuration(fileURL: nil,
+                                                inMemoryIdentifier: inMemoryIdentifier,
+                                                syncConfiguration: nil,
+                                                encryptionKey: nil,
+                                                readOnly: false,
+                                                schemaVersion: 01,
+                                                migrationBlock: nil,
+                                                deleteRealmIfMigrationNeeded: false,
+                                                shouldCompactOnLaunch: nil,
+                                                objectTypes: nil)
+    Realm.Configuration.defaultConfiguration = testConfiguration
+  }
 }
 
 /*
