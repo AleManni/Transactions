@@ -11,22 +11,24 @@ import XCTest
 @testable import BudTransactions
 
 class ImageDownloaderTests: XCTestCase {
-
+  
   let configurator = MockNetworkConfigurator()
-
+  
   func testServiceFetchImage() {
+    // GIVEN
     let network = MockImageNetworkClient(configuration: configurator.configurationForCurrentEnvironment)
     let netService = NetworkService(networkClient: network, configurator: configurator)
     let downloader = ImageDownloader(networkService: netService)
     let mockURLString = "www.test.com"
-
-     let expect = expectation(description: "image fetched")
-
+    
+    let expect = expectation(description: "image fetched")
+    // WHEN
     downloader.downloadImage(mockURLString, completion: { image in
       expect.fulfill()
-        XCTAssertNotNil(image)
+      // THEN
+      XCTAssertNotNil(image)
     })
-
+    
     wait(for: [expect], timeout: 2)
   }
 }

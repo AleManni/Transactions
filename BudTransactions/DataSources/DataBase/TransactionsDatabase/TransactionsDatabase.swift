@@ -12,31 +12,19 @@ import RealmSwift
 
 final class TransactionsDatabase: MainDatabase, TransactionsDatabaseInterface {
 
-  private let writeSerialQueue = DispatchQueue(label: "Realm writing queue")
-
-  func save(domainModel: TransactionDomainModel, completion: @escaping (Bool) -> Void) {
+  func save(domainModel: TransactionDomainModel) {
     guard let transactionObject = TransactionRealmModel(domainModel: domainModel),
-    let productObject = ProductRealmModel(domainModel: domainModel.product) else {
-      return
+      let productObject = ProductRealmModel(domainModel: domainModel.product) else {
+        return
     }
-    writeSerialQueue.async { [weak self] in
-    self?.write(transactionObject, shouldUpdateIfExists: true)
-    self?.write(productObject, shouldUpdateIfExists: true)
-      DispatchQueue.main.async {
-      completion(true)
-      }
-    }
+
+    write(transactionObject, shouldUpdateIfExists: true)
+    write(productObject, shouldUpdateIfExists: true)
   }
 
-  func save(domainModels: [TransactionDomainModel], completion: @escaping (Bool) -> Void) {
-    var counter = 0
+  func save(domainModels: [TransactionDomainModel]) {
     domainModels.forEach {
-      save(domainModel: $0, completion: { _ in
-        counter += 1
-        if counter == domainModels.count {
-          completion(true)
-        }
-      })
+      save(domainModel: $0)
     }
   }
 
@@ -56,7 +44,7 @@ extension TransactionDomainModel {
   init?(transactionDBModel: TransactionRealmModel, productDBModel: ProductRealmModel) {
     guard let category = TransactionCategory(rawValue: transactionDBModel.categoryID),
       let currency = Currency(rawValue: transactionDBModel.currency) else {
-      return nil
+        return nil
     }
     self.id = transactionDBModel.id
     self.date = transactionDBModel.date
