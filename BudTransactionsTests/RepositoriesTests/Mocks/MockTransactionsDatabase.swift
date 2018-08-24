@@ -15,13 +15,12 @@ final class MockTransactionsDatabase: TransactionsDatabaseInterface {
   var dbTransactions: [TransactionDomainModel] = []
 
 
-  func save(domainModel: TransactionDomainModel, completion: @escaping (Bool) -> Void) {
+  func save(domainModel: TransactionDomainModel) {
     // empty implementation
   }
 
-  func save(domainModels: [TransactionDomainModel], completion: @escaping (Bool) -> Void) {
+  func save(domainModels: [TransactionDomainModel]) {
     dbTransactions = domainModels
-    completion(true)
   }
 
   func getAllTransactions() -> [TransactionDomainModel] {

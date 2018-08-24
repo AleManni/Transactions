@@ -9,7 +9,7 @@
 import Foundation
 
 protocol TransactionsDatabaseInterface: DataSource {
-  func save(domainModel: TransactionDomainModel, completion: @escaping (Bool) -> Void)
-  func save(domainModels: [TransactionDomainModel], completion: @escaping (Bool) -> Void)
+  func save(domainModel: TransactionDomainModel)
+  func save(domainModels: [TransactionDomainModel])
   func getAllTransactions() -> [TransactionDomainModel]
 }

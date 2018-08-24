@@ -53,6 +53,8 @@ final class RealmManager: NSObject {
                                                 shouldCompactOnLaunch: nil,
                                                 objectTypes: nil)
     Realm.Configuration.defaultConfiguration = testConfiguration
+     debugLog("[RealmManager] Database memory identifier is: \(inMemoryIdentifier)")
+    debugLog("\(Realm.Configuration.defaultConfiguration)")
   }
 }
 

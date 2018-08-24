@@ -16,9 +16,11 @@ final class TransactionsRepositoryTests: XCTestCase {
   let mockDB = MockTransactionsDatabase()
 
   func testSuccessfulFetchFromAPI() {
+    // GIVEN
     let repo = TransactionsRepository(api: mockAPI, database: mockDB)
-
+    // WHEN
     repo.getAllTransactions(completion: { result in
+      // THEN
       switch result {
       case .failure:
         XCTFail()
@@ -26,14 +28,19 @@ final class TransactionsRepositoryTests: XCTestCase {
         XCTAssertEqual(transactions.count, 3)
         XCTAssertNil(error)
       }
-  })
+    })
   }
 
   func testFoldbackToDB() {
+    // GIVEN
     let repo = TransactionsRepository(api: mockAPI, database: mockDB)
-    repo.getAllTransactions(completion: { _ in })
+    mockDB.save(domainModels: [MockTransactionDomainModel.transactionOne,
+                               MockTransactionDomainModel.transactionTwo,
+                               MockTransactionDomainModel.transactionThree])
     mockAPI.success = false
+    // WHEN
     repo.getAllTransactions(completion: { result in
+      // THEN
       switch result {
       case .failure:
         XCTFail()

@@ -12,6 +12,7 @@ final class TransactionsRepository: TransactionsRepositoryInterface {
 
   let api: TransactionsAPIInterface
   let database: TransactionsDatabaseInterface
+  let realmWriteQueue = DispatchQueue(label: "Transactions realm write queue")
 
   init(api: TransactionsAPIInterface, database: TransactionsDatabaseInterface) {
     self.api = api
@@ -29,7 +30,9 @@ final class TransactionsRepository: TransactionsRepositoryInterface {
       }
       switch result {
       case .success(let transactions):
-        self.database.save(domainModels: transactions, completion: { _ in })
+        self.realmWriteQueue.async {
+        self.database.save(domainModels: transactions)
+        }
         completion(.success((models: transactions, nil)))
       case .failure(let error):
         // fold back to db if we have some data

@@ -13,15 +13,18 @@ import XCTest
 class TransactionListNetworkModelTests: XCTestCase {
 
   func testMapToNetworkModel() {
+    // GIVEN
     let mockJson = "transactions_list"
     guard let data = TestUtilities.loadJSON(mockJson) else {
       XCTFail("Failed to load json")
       return
     }
+    // WHEN
     guard let list = try? JSONDecoder().decode(TransactionListNetworkModel.self, from: data) as? TransactionListNetworkModel else {
       XCTFail("Failed to map object from provided json")
       return
-  }
+    }
+    // THEN
     XCTAssertEqual(list?.transactions.count, 10)
 
     XCTAssertEqual(list?.transactions.first?.id, "13acb877dc4d8030c5dacbde33d3496a2ae3asdc000db4c793bda9c3228baca1a28")
@@ -35,5 +38,4 @@ class TransactionListNetworkModelTests: XCTestCase {
     XCTAssertEqual(list?.transactions.first?.product.title.rawValue, "Lloyds Bank")
     XCTAssertEqual(list?.transactions.first?.product.icon, "https://storage.googleapis.com/budcraftstorage/uploads/products/lloyds-bank/Llyods_Favicon-1_161201_091641.jpg")
   }
-
 }
