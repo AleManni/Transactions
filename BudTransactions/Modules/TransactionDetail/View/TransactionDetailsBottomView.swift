@@ -25,7 +25,7 @@ final class TransactionDetailsBottomView: UIView {
 
   lazy var categoryLabel: UILabel = {
     let label = UILabel()
-    FontFormatter.format(label: label, textStyle: (font: .subtitleBold, color: .navyBlue))
+    FontFormatter.format(label: label, textStyle: (font: .bodySmallBold, color: .navyBlue))
     label.setContentHuggingPriority(.defaultHigh, for: .vertical)
     return label
   }()
@@ -85,8 +85,8 @@ final class TransactionDetailsBottomView: UIView {
     iconImage.image = UIImage(named: representable.categoryIconName)
     categoryLabel.text = representable.categoryDescription
     descriptionLabel.text = representable.description
-    FontFormatter.format(label: categoryLabel, textStyle: (font: .subtitleBold, color: .custom(representable.categoryColour)))
-    FontFormatter.format(label: descriptionLabel, textStyle: (font: .largeRegular, color: .custom(representable.categoryColour)))
+    FontFormatter.format(label: categoryLabel, textStyle: (font: .bodySmallBold, color: .custom(representable.categoryColour)))
+    FontFormatter.format(label: descriptionLabel, textStyle: (font: .bodyRegular, color: .custom(representable.categoryColour)))
   }
 
 }
