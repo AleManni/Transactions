@@ -23,6 +23,8 @@ The NavigationService is inspired by MVVM+C architecture and injected into  Vipe
 
 SOLID principles are respected and a better control over navigation is achieved (IMO).
 
+![alternativetext](githubResources/architecture.jpg)
+
 ## Model types and data binding
 
  In the current implementation, every layer use their own Model types:
