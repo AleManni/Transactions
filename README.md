@@ -28,7 +28,7 @@ SOLID principles are respected and a better control over navigation is achieved 
 ## Model types and data binding
 
  In the current implementation, every layer use their own Model types:
- - the data layer (DataSources) make use of their own specific **NetworkModel** (API Datasource) and **DatabaseModel** (Database Datasource) types but interface with the upper layer (Repository) via the corresponding **DomainModel** types. 
+ - the DataSources (data layer) make use of their own specific **NetworkModel** (API Datasource) and **DatabaseModel** (Database Datasource) types but interface with the data layer facade (Repository) via the corresponding **DomainModel** types. 
  This allows the Repository to get data from a datasource and pass it to another without knowing the internal types that are used by the specific data sources.
 This also ensures that the Repository will provide or accept a single Domain Model type to/from the upper layers of the app.
  - the domain layer (logic layer of the app) use the **DomainModel** types. The DomainModels are often simply referred to as Models in other implementations.
