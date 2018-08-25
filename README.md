@@ -10,7 +10,7 @@
  
  > Data persistence
  >
- - The app persists transactions using an encrypted (Realm) database. 
+ - The app persists transactions using an encrypted database (Realm 64-byte key backed by AES-256+SHA2)
  - The database acts as a foldback when an error is returned by the NetworkService or when the app cannot reach the network. In both cases the user is alerted that the data presented might not be up to date.
 
  ## Architecture
