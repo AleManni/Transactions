@@ -8,10 +8,10 @@
 
 import UIKit
 /**
- The ModulesFactory operates as a VIPER wireframe.
+ The ModulesFactory operates as a wireframe for its client (the NavigationService)
  The initialization method allows to inject a class conforming to BudRepositories that provides concrete repositories implementations to the ModulesFactory.
  Such class will provide the repositories used by the ModulesFactory implementation in order to build each Module.
- Upon implementing UI Tests, a class such as TestRepository can be used to feed mock data to the app
+ Upon implementing UI Tests, a class such as TestRepositories could be used to feed mock data to the app
  */
 
 protocol BudRepositories {

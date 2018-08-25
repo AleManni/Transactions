@@ -8,6 +8,9 @@
 
 import Foundation
 
+/***
+ Specialized Error type for the NetworkService class
+ */
 public enum NetworkErrors: Error {
   case invalidURL
   case jsonDeserializationError(Error)

@@ -13,40 +13,18 @@ import UIKit
 public typealias TextStyle = (font: FontStyle, color: BudColour)
 
 /**
- Font style convention for the CrowdScores app.
+ Font style convention for the Bud app.
  */
 public enum FontStyle {
   case titleExtraLargeHeavy
   case titleVeryLargeHeavy
-  case titleLargeBold
-  case caption
-  case captionLarge
-  case bodyLargeRegular
-  case bodyLargeLight
+  case bodyLargeBold
   case bodyRegular
-  case bodyHeavy
   case bodySmallRegular
+  case bodySmallBold
   case bodyVerySmallBold
-  case bodyVerySmallSemiBold
   case bodyVerySmallRegular
-  case bodyVerySmallMedium
-  case footnoteRegular
-  case subheadRegular
-  case headlineSemiBold
-  case linkSmallRegular
-  case linkSmallBold
-  case linkRegular
-  case linkLargeRegular
-  case subtitleSemibold
-  case subtitleBold
-  case subtitleMedium
-  case subtitleSmallSemibold
-  case subtitleSmallRegular
-  case subtitleVerySmallRegular
-  case subtitleVerySmallMedium
-  case subtitleVerySmallBold
-  case largeRegular
-  case largeBold
+  case bodyExtraSmallBold
   case navigation
   case custom(UIFont)
 
@@ -56,64 +34,20 @@ public enum FontStyle {
       return .systemFont(ofSize: 33.0, weight: .heavy)
     case .titleVeryLargeHeavy:
       return .systemFont(ofSize: 27.0, weight: .heavy)
-    case .titleLargeBold:
+    case .bodyLargeBold:
       return .systemFont(ofSize: 22.0, weight: .bold)
-    case .caption:
-      return .systemFont(ofSize: 15.0, weight: .heavy)
-    case .captionLarge:
-      return .systemFont(ofSize: 20.0, weight: .heavy)
-    case .bodyLargeRegular:
-      return .systemFont(ofSize: 20.0, weight: .regular)
-    case .bodyLargeLight:
-      return .systemFont(ofSize: 20.0, weight: .light)
+    case .bodyRegular:
+      return .systemFont(ofSize: 18.0, weight: .regular)
     case .bodySmallRegular:
       return .systemFont(ofSize: 15.0, weight: .regular)
-    case .bodyRegular:
-      return .systemFont(ofSize: 17.0, weight: .regular)
-    case .bodyHeavy:
-      return .systemFont(ofSize: 17.0, weight: .heavy)
+    case .bodySmallBold:
+      return .systemFont(ofSize: 15.0, weight: .bold)
     case .bodyVerySmallBold:
       return .systemFont(ofSize: 13.0, weight: .bold)
-    case .bodyVerySmallSemiBold:
-      return .systemFont(ofSize: 13.0, weight: .semibold)
     case .bodyVerySmallRegular:
       return .systemFont(ofSize: 13.0, weight: .regular)
-    case .bodyVerySmallMedium:
-      return .systemFont(ofSize: 13.0, weight: .medium)
-    case .footnoteRegular:
-      return .systemFont(ofSize: 13.0, weight: .regular)
-    case .subheadRegular:
-      return .systemFont(ofSize: 15.0, weight: .regular)
-    case .headlineSemiBold:
-      return .systemFont(ofSize: 17.0, weight: .semibold)
-    case .linkSmallRegular:
-      return .systemFont(ofSize: 13.0, weight: .regular)
-    case .linkSmallBold:
-      return .systemFont(ofSize: 13.0, weight: .bold)
-    case .linkRegular:
-      return .systemFont(ofSize: 15.0, weight: .regular)
-    case .linkLargeRegular:
-      return .systemFont(ofSize: 20.0, weight: .regular)
-    case .subtitleSmallSemibold:
-      return .systemFont(ofSize: 13.0, weight: .semibold)
-    case .subtitleSemibold:
-      return .systemFont(ofSize: 15.0, weight: .semibold)
-    case .subtitleBold:
-      return .systemFont(ofSize: 15.0, weight: .bold)
-    case .subtitleMedium:
-      return .systemFont(ofSize: 15.0, weight: .medium)
-    case .subtitleSmallRegular:
-      return .systemFont(ofSize: 13.0, weight: .regular)
-    case .subtitleVerySmallRegular:
-      return .systemFont(ofSize: 11.0, weight: .regular)
-    case .subtitleVerySmallMedium:
-      return .systemFont(ofSize: 11.0, weight: .medium)
-    case .subtitleVerySmallBold:
+    case .bodyExtraSmallBold:
       return .systemFont(ofSize: 11.0, weight: .bold)
-    case .largeRegular:
-      return .systemFont(ofSize: 18.0, weight: .bold)
-    case .largeBold:
-      return .systemFont(ofSize: 22.0, weight: .bold)
     case .navigation:
       if #available(iOS 11, *) {
         return .systemFont(ofSize: 17.0, weight: .semibold)
@@ -132,9 +66,8 @@ public enum FontStyle {
  - UILabel
  - UIButton
  - UITextView
+*/
 
- Feel free to add support for any new component you need, even custom component if required.
- */
 public struct FontFormatter {
 }
 

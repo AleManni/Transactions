@@ -9,7 +9,7 @@
 import Foundation
 
 /***
- Specialized error type for API classes
+ Specialized Error type for API classes
  */
 public enum APIErrors: Error {
   case invalidRequest

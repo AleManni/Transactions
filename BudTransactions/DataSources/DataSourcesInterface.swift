@@ -8,5 +8,8 @@
 
 import Foundation
 
+/**
+ This empty protocol is implemented by the data source classes in order to clarify their responsability in the  current data layer architecture
+ */
 protocol DataSource {
 }

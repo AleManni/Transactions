@@ -19,7 +19,7 @@ final class  TransactionsSectionsHeader: UITableViewHeaderFooterView {
     super.init(reuseIdentifier: reuseIdentifier)
 
     if let label = textLabel {
-      FontFormatter.format(label: label, textStyle: (.subtitleVerySmallBold, .purple))
+      FontFormatter.format(label: label, textStyle: (.bodyExtraSmallBold, .purple))
     }
   }
 

@@ -8,12 +8,6 @@
 
 import Foundation
 
-// To parse the JSON, add this file to your project and do:
-//
-//   let transactions = try? newJSONDecoder().decode(Transactions.self, from: jsonData)
-
-import Foundation
-
 struct TransactionListNetworkModel: Codable {
   let transactions: [TransactionNetworkModel]
 

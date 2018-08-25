@@ -9,7 +9,7 @@
 import UIKit
 
 /**
- `RealmService` is an app service that takes care of managing the Realm database.
+ `RealmService` is an app service that takes care of launching the initial configuration for the Realm database.
  */
 final class RealmService: AppService, ApplicationService {
   func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {

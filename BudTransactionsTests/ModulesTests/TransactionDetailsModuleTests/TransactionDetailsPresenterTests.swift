@@ -27,7 +27,7 @@ class TransactionDetailsPresenterTests: XCTestCase {
 
     XCTAssertNotNil(view.representable)
     XCTAssertEqual(view.representable?.amount, "£10.00")
-    XCTAssertEqual(view.representable?.categoryColour, BudColour.navyBlue.rawValue)
+    XCTAssertEqual(view.representable?.categoryColour, BudColour.lightPurple.rawValue)
     XCTAssertEqual(view.representable?.categoryDescription, "Entertainment")
     XCTAssertEqual(view.representable?.categoryIconName, "ic_entertainment")
     XCTAssertEqual(view.representable?.dateString, "Wednesday, 1 Aug")

@@ -31,7 +31,7 @@ final class NetworkService: AppService, ApplicationService, Network {
 
   func handleRequest(_ request: URLRequest, completion: @escaping (NetworkResult) -> Void) {
 
-    // Point of injection for auth headers, app common headers etc
+    // Point of injection for auth headers, app common headers etc. Not used in this demo.
 
     networkClient.handleRequest(request, completion: { result in
       DispatchQueue.main.async {

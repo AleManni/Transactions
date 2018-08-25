@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+/**
+ Spend categories as deducted by the provied data 
+ */
 public enum TransactionCategory: Int {
   case entertainment = 0
   case utilities = 1
@@ -49,7 +52,7 @@ public enum TransactionCategory: Int {
   var associatedColour: UIColor {
     switch self {
     case .entertainment:
-      return BudColour.navyBlue.rawValue
+      return BudColour.lightPurple.rawValue
     case .utilities:
       return BudColour.purple.rawValue
     case .restaurants:
@@ -59,6 +62,6 @@ public enum TransactionCategory: Int {
     case .grocery:
       return BudColour.green.rawValue
     }
-
   }
+
 }

@@ -9,6 +9,9 @@
 import Foundation
 import RealmSwift
 
+/**
+ Abstract class to provide the blueprint for the concrete databases (e.g. TransactionsDatabase class)
+ */
 class MainDatabase: DataSource {
   func write(_ object: Object, shouldUpdateIfExists: Bool) {
     autoreleasepool {

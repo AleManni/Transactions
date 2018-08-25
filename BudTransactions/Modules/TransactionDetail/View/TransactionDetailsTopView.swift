@@ -27,7 +27,7 @@ class TransactionDetailsTopView: UIView {
 
   lazy var amountLabel: UILabel = {
     let label = UILabel()
-    FontFormatter.format(label: label, textStyle: (font: .largeBold, color: .navyBlue))
+    FontFormatter.format(label: label, textStyle: (font: .bodyLargeBold, color: .navyBlue))
     label.setContentHuggingPriority(.defaultHigh, for: .vertical)
     return label
   }()

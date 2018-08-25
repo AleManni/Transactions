@@ -54,12 +54,11 @@ final class RealmManager: NSObject {
                                                 objectTypes: nil)
     Realm.Configuration.defaultConfiguration = testConfiguration
      debugLog("[RealmManager] Database memory identifier is: \(inMemoryIdentifier)")
-    debugLog("\(Realm.Configuration.defaultConfiguration)")
   }
 }
 
 /*
- 64 bit encryption key generation and retrival from Realm official documentation:
+ 64-byte key backed by AES-256+SHA2 encryption key generation and retrival from Realm official documentation:
  https://github.com/realm/realm-cocoa/blob/master/examples/ios/swift/Encryption/ViewController.swift
  */
 extension RealmManager {

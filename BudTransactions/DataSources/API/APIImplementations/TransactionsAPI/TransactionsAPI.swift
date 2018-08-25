@@ -21,13 +21,7 @@ final class TransactionsAPI: TransactionsAPIInterface, API {
     self.init(NetworkService.safeSession)
   }
 
-  let transactionsRequest = APIRequest(endpoint: "5b33bdb43200008f0ad1e256",
-                                       ids: nil,
-                                       pathOptionalSuffix: nil,
-                                       parameters: nil,
-                                       body: nil,
-                                       method: .get,
-                                       apiVersion: .version2)
+  let transactionsRequest = APIRequest(endpoint: "5b33bdb43200008f0ad1e256")
 
   func getTransactions(completion: @escaping ((OperationResult<[TransactionDomainModel]>) -> Void)) {
     getObject(request: transactionsRequest, completion: { result in
