@@ -14,8 +14,7 @@ final class TransactionsPresenter: TransactionsInteractorOutput {
   var interactor: TransactionsInteractor?
   weak var router: TransactionsRouter?
 
-  var transactions: [TransactionDomainModel] = []
-  var error: Error?
+  private var transactions: [TransactionDomainModel] = []
 
   var warning: String? = nil {
     didSet {
@@ -45,17 +44,16 @@ final class TransactionsPresenter: TransactionsInteractorOutput {
   }
 
   private func generateRepresentables(models: [TransactionDomainModel]) -> TransactionsListRepresentable {
-    let tuples: [(Date, [TransactionRepresentable])] = Dictionary.init(grouping: transactions, by: { $0.date })
+    let tuples: [(Date, [TransactionRepresentable])] = Dictionary(grouping: transactions, by: { $0.date })
       .mapValues { $0.compactMap { TransactionRepresentable(model: $0) }}
       .map { key, value in
       return (key, value)
     }.sorted(by: { $0.0 > $1.0 })
 
-    let representables: TransactionsListRepresentable = tuples.map { (date, transactions) in
+    return tuples.map { (date, transactions) in
       let title = dateFormatter.string(from: date)
       return (title: title, transactions: transactions)
     }
-    return representables
   }
 
   private func errorDescription(_ error: Error?) -> String? {
