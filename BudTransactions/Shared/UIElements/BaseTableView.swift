@@ -44,6 +44,11 @@ class BaseTableView: UITableView {
     }
   }
 
+/**
+Class initialiser
+   - parameter placeholder: an instance of a PlaceHolderView class
+   - parameter style: UITableViewStyle fof the table view
+ */
   init(placeholder: PlaceHolderView?, style: UITableViewStyle = .plain) {
     self.placeholder = placeholder
     super.init(frame: CGRect.zero, style: style)

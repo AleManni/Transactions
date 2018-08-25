@@ -14,6 +14,7 @@ import UIKit
  */
 public enum BudColour {
   case navyBlue
+  case lightPurple
   case red
   case lightBlue
   case green
@@ -26,12 +27,14 @@ public enum BudColour {
     switch self {
     case .navyBlue:
       return UIColor(hex: 0x021E63)
+    case .lightPurple:
+      return UIColor(hex: 0x9A3853)
     case .red:
       return UIColor(hex: 0xEF484D)
     case .lightBlue:
       return UIColor(hex: 0x4793ED)
     case .green:
-      return UIColor(hex: 0x2AFD6E)
+      return UIColor(hex: 0x28F068)
     case .purple:
       return UIColor(hex: 0x522B5A)
     case .grey50:
@@ -41,15 +44,5 @@ public enum BudColour {
     case .custom(let colour):
       return colour
     }
-  }
-}
-
-extension UIColor {
-  convenience init(hex: UInt32, alpha: CGFloat = 1.0) {
-    let red = CGFloat((hex & 0xff0000) >> 16) / 255.0
-    let green = CGFloat((hex & 0xff00) >> 8) / 255.0
-    let blue = CGFloat(hex &  0xff) / 255.0
-
-    self.init(red: red, green: green, blue: blue, alpha: alpha)
   }
 }

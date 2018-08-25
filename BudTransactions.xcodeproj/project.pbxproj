@@ -62,6 +62,7 @@
 		1D6FD6462126B3DD005D0ADF /* NetworkInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD6452126B3DD005D0ADF /* NetworkInterfaces.swift */; };
 		1D6FD6482126B46E005D0ADF /* NetworkServiceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FD6472126B46E005D0ADF /* NetworkServiceExtension.swift */; };
 		1D7C388A2126B5B900B8B3C6 /* DefaultNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C38892126B5B900B8B3C6 /* DefaultNetworkClient.swift */; };
+		1D9A60492131A6E500FFCBBB /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9A60482131A6E500FFCBBB /* UIColorExtensions.swift */; };
 		1DAAA0DA212727480043AC86 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAAA0D9212727480043AC86 /* NetworkResult.swift */; };
 		1DAAA0DC212728170043AC86 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAAA0DB212728170043AC86 /* NetworkErrors.swift */; };
 		1DAAA0DE212728A60043AC86 /* DebugLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAAA0DD212728A60043AC86 /* DebugLog.swift */; };
@@ -141,7 +142,6 @@
 		1D02FA10212DAA3E00A23CF9 /* TransactionDetailsTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsTopView.swift; sourceTree = "<group>"; };
 		1D02FA12212DB4EB00A23CF9 /* TransactionDetailsBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsBottomView.swift; sourceTree = "<group>"; };
 		1D02FA14212DDD9300A23CF9 /* ReachabilityResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityResponder.swift; sourceTree = "<group>"; };
-		1D02FA16212DE40300A23CF9 /* ReachabilityErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityErrors.swift; sourceTree = "<group>"; };
 		1D3979EE2129CD6C00CF66F7 /* Representable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Representable.swift; sourceTree = "<group>"; };
 		1D3979F02129DAE900CF66F7 /* TransactionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsPresenter.swift; sourceTree = "<group>"; };
 		1D3979F22129F15C00CF66F7 /* TransactionsListRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsListRepresentable.swift; sourceTree = "<group>"; };
@@ -179,6 +179,7 @@
 		1D6FD6452126B3DD005D0ADF /* NetworkInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInterfaces.swift; sourceTree = "<group>"; };
 		1D6FD6472126B46E005D0ADF /* NetworkServiceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceExtension.swift; sourceTree = "<group>"; };
 		1D7C38892126B5B900B8B3C6 /* DefaultNetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultNetworkClient.swift; sourceTree = "<group>"; };
+		1D9A60482131A6E500FFCBBB /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		1DAAA0D9212727480043AC86 /* NetworkResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		1DAAA0DB212728170043AC86 /* NetworkErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		1DAAA0DD212728A60043AC86 /* DebugLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLog.swift; sourceTree = "<group>"; };
@@ -287,15 +288,6 @@
 			path = NavigationServiceExtensions;
 			sourceTree = "<group>";
 		};
-		1D02F9F7212D375600A23CF9 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				1D6FD62521260D98005D0ADF /* BudColour.swift */,
-				1D02F9F8212D377900A23CF9 /* BudKeyChain.swift */,
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
 		1D02F9FE212D6FF400A23CF9 /* TransactionDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,7 +389,6 @@
 			isa = PBXGroup;
 			children = (
 				1DF04BF4212862EB0095A931 /* PublicEnums */,
-				1D02F9F7212D375600A23CF9 /* Constants */,
 				1D028914212B474C007964B9 /* UIElements */,
 				1D6FD6422126B1C5005D0ADF /* Network */,
 				1DAAA0DF21272D0B0043AC86 /* Realm */,
@@ -413,7 +404,6 @@
 			isa = PBXGroup;
 			children = (
 				1DAAA0DB212728170043AC86 /* NetworkErrors.swift */,
-				1D02FA16212DE40300A23CF9 /* ReachabilityErrors.swift */,
 				1D6FD61321260906005D0ADF /* APIErrors.swift */,
 				1D6FD61521260940005D0ADF /* RepositoryErrors.swift */,
 			);
@@ -427,6 +417,7 @@
 				1D6FD62721260E22005D0ADF /* URLComponentExtensions.swift */,
 				1D3979FB212A2EE700CF66F7 /* UIImageViewExtensions.swift */,
 				1D02891F212B7144007964B9 /* CollectionExtensions.swift */,
+				1D9A60482131A6E500FFCBBB /* UIColorExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -681,6 +672,8 @@
 			children = (
 				1DF04BF5212862F80095A931 /* Currency.swift */,
 				1DF04BF921286CDF0095A931 /* ProductCategory.swift */,
+				1D6FD62521260D98005D0ADF /* BudColour.swift */,
+				1D02F9F8212D377900A23CF9 /* BudKeyChain.swift */,
 			);
 			path = PublicEnums;
 			sourceTree = "<group>";
@@ -716,9 +709,9 @@
 		1DF04C0B21288A050095A931 /* TransactionsDatabase */ = {
 			isa = PBXGroup;
 			children = (
-				1DF04C1021288CF90095A931 /* RealmModels */,
 				1DD66A032129500D00B04DD1 /* TransactionsDatabaseInterface.swift */,
 				1DF04C1121288D450095A931 /* TransactionsDatabase.swift */,
+				1DF04C1021288CF90095A931 /* RealmModels */,
 			);
 			path = TransactionsDatabase;
 			sourceTree = "<group>";
@@ -1002,6 +995,7 @@
 				1D3979F12129DAE900CF66F7 /* TransactionsPresenter.swift in Sources */,
 				1D6FD618212609B0005D0ADF /* OperationResult.swift in Sources */,
 				1D028926212B77D1007964B9 /* TransactionsNavigation.swift in Sources */,
+				1D9A60492131A6E500FFCBBB /* UIColorExtensions.swift in Sources */,
 				1DD66A0921295DB700B04DD1 /* TransactionRepositoryInterface.swift in Sources */,
 				1D02891A212B4C99007964B9 /* ErrorBannerView.swift in Sources */,
 				1DAAA0E5212758390043AC86 /* EphemeralNetworkConfigurator.swift in Sources */,

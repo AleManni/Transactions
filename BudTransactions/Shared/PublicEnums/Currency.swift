@@ -7,7 +7,9 @@
 //
 
 import Foundation
-
+/**
+ Currency ISO
+ */
 public enum Currency: String, Codable {
   case gbp = "GBP"
 }

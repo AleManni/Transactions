@@ -16,16 +16,16 @@ protocol TransactionsInteractorOutput: class {
   func fetched(result: OperationResult<(models: [TransactionDomainModel], error: Error?)>)
 }
 
-protocol TransactionsViewInterface: class {
-  func showTransactions(transactions: TransactionsListRepresentable)
-  func isLoading(_ isLoading: Bool)
-  func displayWarning(_ warning: String?)
-}
-
 protocol TransactionsPresenterInput: class {
   func updateView()
   func showDetailsForTransaction(id: String)
   func viewDidReceiveReachabilityWarning(_ warning: String?)
+}
+
+protocol TransactionsViewInterface: class {
+  func showTransactions(transactions: TransactionsListRepresentable)
+  func isLoading(_ isLoading: Bool)
+  func displayWarning(_ warning: String?)
 }
 
 protocol TransactionsRouter: class {

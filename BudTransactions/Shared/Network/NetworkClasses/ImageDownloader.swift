@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+/**
+ Utility class for downloading images
+ Due to the non sensitive type of the images in this demo app, the shared singleton makes use of the cachedSession (CachingNetworkConfiguration) in order to minimise network usage.
+ */
 final class ImageDownloader {
 
   let networkService: Network

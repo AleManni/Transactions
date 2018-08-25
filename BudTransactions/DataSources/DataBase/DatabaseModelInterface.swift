@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Database models (Realm models) are instantiated with an instance of the corresponding app domain model
+ */
 protocol DatabaseModel {
   init?(domainModel: DomainModel)
 }

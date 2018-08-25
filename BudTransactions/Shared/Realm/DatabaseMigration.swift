@@ -16,7 +16,7 @@ import RealmSwift
 
 <RealmClassName>Migration<PropertyName(s)ToChange>_<appVersion>_<migrationNumber>_<date>.swift
 
-  For example: CompetitionMigrationUserOrdering_4_4_140218
+  E.g.: CompetitionMigrationUserOrdering_4_4_140218
 */
 protocol DatabaseMigration {
   func perform(migration: Migration, oldSchemaVersion: UInt64)

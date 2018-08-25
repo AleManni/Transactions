@@ -9,7 +9,7 @@
 import Foundation
 
 /***
- Specialized error type for repository classes
+ Specialized Error type for repository classes
  */
 enum RepositoryErrors: Error {
   case noResult
