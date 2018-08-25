@@ -31,6 +31,6 @@ SOLID principles are respected and a better control over navigation is achieved 
  - the DataSources (data layer) make use of their own specific **NetworkModel** (API Datasource) and **DatabaseModel** (Database Datasource) types but interface with the data layer facade (Repository) via the corresponding **DomainModel** types. 
  This allows the Repository to get data from a datasource and pass it to another without knowing the internal types that are used by the specific data sources.
 This also ensures that the Repository will provide or accept a single Domain Model type to/from the upper layers of the app.
- - the domain layer (logic layer of the app) use the **DomainModel** types. The DomainModels are often simply referred to as Models in other implementations.
+ - the domain layer (logic layer of the app) use the **DomainModel** types. The DomainModels are often simply referred to as Models in MVC or MVVM implementations or Entities in Viper.
  - the UI layer use view-specific **Representable** types provided by the presentation layer (Presenter). DomainModels are never exposed to the UI. 
 
