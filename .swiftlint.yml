@@ -2,7 +2,7 @@ included:
   - BudTransactions
 excluded:
   - Pods
-line_length: 160
+line_length: 360
 identifier_name:
   min_length: # only min_length
     error: 2 # only error
