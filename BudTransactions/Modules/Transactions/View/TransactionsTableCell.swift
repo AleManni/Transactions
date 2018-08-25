@@ -45,14 +45,14 @@ final class  TransactionsTableCell: UITableViewCell {
     contentView.addSubview(categoryImageView)
     contentView.addSubview(titleLabel)
     contentView.addSubview(amountLabel)
+    setConstraints()
   }
 
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
 
-  override func layoutSubviews() {
-    super.layoutSubviews()
+  private func setConstraints() {
 
     categoryImageView.translatesAutoresizingMaskIntoConstraints = false
     titleLabel.translatesAutoresizingMaskIntoConstraints = false
