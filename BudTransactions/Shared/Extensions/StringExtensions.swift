@@ -18,20 +18,4 @@ extension String {
       .replacingOccurrences(of: " ", with: "+", options: [], range: nil)
     return encodedString ?? self
   }
-
-    //: ### Base64 encoding
-    func base64Encoded() -> String? {
-      if let data = self.data(using: .utf8) {
-        return data.base64EncodedString()
-      }
-      return nil
-    }
-
-    //: ### Base64 decoding
-    func base64Decoded() -> String? {
-      if let data = Data(base64Encoded: self) {
-        return String(data: data, encoding: .utf8)
-      }
-      return nil
-    }
 }
