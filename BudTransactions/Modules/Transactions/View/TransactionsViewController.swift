@@ -37,6 +37,7 @@ final class TransactionsViewController: UIViewController {
   init() {
     super.init(nibName: nil, bundle: nil)
     title = "Transactions"
+    navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
   }
 
   required init?(coder aDecoder: NSCoder) {

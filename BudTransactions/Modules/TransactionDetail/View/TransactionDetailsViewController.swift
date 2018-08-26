@@ -19,7 +19,6 @@ final class TransactionDetailsViewController: UIViewController {
   init() {
     super.init(nibName: nil, bundle: nil)
     view.backgroundColor = .white
-    self.navigationController?.navigationItem.largeTitleDisplayMode = .never
   }
 
   required init?(coder aDecoder: NSCoder) {

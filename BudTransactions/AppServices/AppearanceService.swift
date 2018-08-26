@@ -39,6 +39,8 @@ extension AppearanceService {
     UINavigationBar.appearance().tintColor = .white
     UINavigationBar.appearance().barTintColor = BudColour.navyBlue.rawValue
     UINavigationBar.appearance().isTranslucent = false
-    UINavigationBar.appearance().prefersLargeTitles = true
+    if #available(iOS 11.0, *) {
+      UINavigationBar.appearance().prefersLargeTitles = true
+    }
   }
 }
