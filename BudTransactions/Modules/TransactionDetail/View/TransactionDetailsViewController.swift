@@ -11,7 +11,7 @@ import UIKit
 
 final class TransactionDetailsViewController: UIViewController {
 
-  var presenter: TransactionDetailsPresenter?
+  var presenter: TransactionDetailsPresenterInput?
 
   lazy var topView = TransactionDetailsTopView(frame: .zero)
   lazy var bottomView = TransactionDetailsBottomView(frame: .zero)

@@ -11,7 +11,7 @@ import UIKit
 
 final class TransactionsViewController: UIViewController {
 
-  var presenter: TransactionsPresenter?
+  var presenter: TransactionsPresenterInput?
 
   lazy var tableView: TransactionsTableView = {
     let placeholder = PlaceHolderView(title: "No transactions",

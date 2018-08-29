@@ -11,7 +11,7 @@ import Foundation
 final class TransactionsPresenter: TransactionsInteractorOutput {
 
   weak var view: TransactionsViewInterface?
-  var interactor: TransactionsInteractor?
+  var interactor: TransactionsInteractorInput?
   weak var router: TransactionsRouter?
 
   private var transactions: [TransactionDomainModel] = []
