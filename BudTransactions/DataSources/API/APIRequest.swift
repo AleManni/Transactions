@@ -87,7 +87,7 @@ extension APIRequest {
     return (request, nil)
   }
 
-  var urlString: String? {
+  private var urlString: String? {
     var components = URLComponents()
     components.scheme = "https"
     components.percentEncodedHost = URLComponents.budBase()
