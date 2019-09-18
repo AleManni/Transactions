@@ -13,12 +13,22 @@ final class TransactionDetailsViewController: UIViewController {
 
   var presenter: TransactionDetailsPresenterInput?
 
-  lazy var topView = TransactionDetailsTopView(frame: .zero)
-  lazy var bottomView = TransactionDetailsBottomView(frame: .zero)
+  lazy var topView: TransactionDetailsTopView = {
+    let topView = TransactionDetailsTopView(frame: .zero)
+    topView.accessibilityIdentifier = "transactionDetailsTopView"
+    return topView
+  }()
+
+  lazy var bottomView: TransactionDetailsBottomView = {
+    let bottomView = TransactionDetailsBottomView(frame: .zero)
+    bottomView.accessibilityIdentifier = "transactionDetailsBottomView"
+    return bottomView
+  }()
 
   init() {
     super.init(nibName: nil, bundle: nil)
     view.backgroundColor = .white
+    view.accessibilityIdentifier = "transactionDetailsRootView"
   }
 
   required init?(coder aDecoder: NSCoder) {

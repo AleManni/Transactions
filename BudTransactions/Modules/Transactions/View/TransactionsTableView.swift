@@ -33,6 +33,7 @@ final class TransactionsTableView: BaseTableView {
     tableFooterView = UIView()
     self.dataSource = self
     self.delegate = self
+    accessibilityIdentifier = "transactionsListTableView"
   }
 
   required init?(coder aDecoder: NSCoder) {
