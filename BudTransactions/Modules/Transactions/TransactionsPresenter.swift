@@ -44,11 +44,14 @@ final class TransactionsPresenter: TransactionsInteractorOutput {
   }
 
   private func generateRepresentables(models: [TransactionDomainModel]) -> TransactionsListRepresentable {
-    let tuples: [(Date, [TransactionRepresentable])] = Dictionary(grouping: transactions, by: { $0.date })
+    
+    let tuples: [(Date, [TransactionRepresentable])] = Dictionary(grouping: transactions, by: { Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: $0.date)) ?? $0.date
+    })
       .mapValues { $0.compactMap { TransactionRepresentable(model: $0) }}
-      .map { key, value in
+      .compactMap { key, value in
       return (key, value)
-    }.sorted(by: { $0.0 > $1.0 })
+    }
+    .sorted(by: { $0.0 > $1.0 })
 
     return tuples.map { (date, transactions) in
       let title = dateFormatter.string(from: date)

@@ -31,6 +31,7 @@
 		1D02FA15212DDD9300A23CF9 /* ReachabilityResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02FA14212DDD9300A23CF9 /* ReachabilityResponder.swift */; };
 		1D0801C62332582A00C196B8 /* BudTransactionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0801C52332582A00C196B8 /* BudTransactionsUITests.swift */; };
 		1D0801D223325C0500C196B8 /* TransactionsMockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0801D123325C0500C196B8 /* TransactionsMockAPI.swift */; };
+		1D0801D423326E3E00C196B8 /* BudRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0801D323326E3E00C196B8 /* BudRepositories.swift */; };
 		1D3979EF2129CD6C00CF66F7 /* Representable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3979EE2129CD6C00CF66F7 /* Representable.swift */; };
 		1D3979F12129DAE900CF66F7 /* TransactionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3979F02129DAE900CF66F7 /* TransactionsPresenter.swift */; };
 		1D3979F32129F15C00CF66F7 /* TransactionsListRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3979F22129F15C00CF66F7 /* TransactionsListRepresentable.swift */; };
@@ -156,6 +157,7 @@
 		1D0801C52332582A00C196B8 /* BudTransactionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudTransactionsUITests.swift; sourceTree = "<group>"; };
 		1D0801C72332582A00C196B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D0801D123325C0500C196B8 /* TransactionsMockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsMockAPI.swift; sourceTree = "<group>"; };
+		1D0801D323326E3E00C196B8 /* BudRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudRepositories.swift; sourceTree = "<group>"; };
 		1D3979EE2129CD6C00CF66F7 /* Representable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Representable.swift; sourceTree = "<group>"; };
 		1D3979F02129DAE900CF66F7 /* TransactionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsPresenter.swift; sourceTree = "<group>"; };
 		1D3979F22129F15C00CF66F7 /* TransactionsListRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsListRepresentable.swift; sourceTree = "<group>"; };
@@ -490,6 +492,7 @@
 			isa = PBXGroup;
 			children = (
 				1D6FD6312126AABA005D0ADF /* AppCoordinator.swift */,
+				1D0801D323326E3E00C196B8 /* BudRepositories.swift */,
 				1D6FD6352126AACC005D0ADF /* ModulesFactory.swift */,
 				1D028921212B73DD007964B9 /* ModulesFactoryExtensions */,
 				1D6FD6332126AAC1005D0ADF /* NavigationService.swift */,
@@ -1169,6 +1172,7 @@
 				1D02FA0D212D804B00A23CF9 /* TransactionDetailsModuleFactory.swift in Sources */,
 				1D02FA0B212D7F2600A23CF9 /* TransactionDetailsViewController.swift in Sources */,
 				1D028920212B7144007964B9 /* CollectionExtensions.swift in Sources */,
+				1D0801D423326E3E00C196B8 /* BudRepositories.swift in Sources */,
 				1D6FD62121260C85005D0ADF /* StringExtensions.swift in Sources */,
 				1DD66A1621296BBB00B04DD1 /* TrasactionsInterfaces.swift in Sources */,
 				1DF04C1221288D450095A931 /* TransactionsDatabase.swift in Sources */,
