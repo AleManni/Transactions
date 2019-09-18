@@ -15,8 +15,16 @@ import Reachability
 @objc final class DefaultAppCoordinator: NSObject {
   @objc public static let shared = DefaultAppCoordinator()
 
+  private var repositories: BudRepositories {
+    #if TESTING
+    return TestsRepositories()
+    #else
+    return ProductionRepositories()
+    #endif
+  }
+
   lazy var navigationService: NavigationService? = {
-    return NavigationService(viewControllersFactory: ModulesFactory(repositories: ProductionRepositories()))
+    return NavigationService(viewControllersFactory: ModulesFactory(repositories: repositories))
   }()
 
   func performsStartUpOperations() {

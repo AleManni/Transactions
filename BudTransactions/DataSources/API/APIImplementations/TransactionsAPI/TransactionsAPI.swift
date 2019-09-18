@@ -11,7 +11,7 @@ import Foundation
 final class TransactionsAPI: TransactionsAPIInterface, API {
   typealias NetworkModel = TransactionListNetworkModel
 
-  var networkService: NetworkService
+  var networkService: NetworkService?
 
   init(_ networkService: NetworkService) {
     self.networkService = networkService
@@ -38,7 +38,7 @@ final class TransactionsAPI: TransactionsAPIInterface, API {
   }
 }
 
-extension TransactionDomainModel {
+private extension TransactionDomainModel {
 
   init?(networkModel: TransactionNetworkModel) {
     guard let date = DateTools.dateFromAPIString(networkModel.date),

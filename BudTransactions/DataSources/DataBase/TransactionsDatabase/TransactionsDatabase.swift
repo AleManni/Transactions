@@ -40,7 +40,7 @@ final class TransactionsDatabase: MainDatabase, TransactionsDatabaseInterface {
   }
 }
 
-extension TransactionDomainModel {
+private extension TransactionDomainModel {
   init?(transactionDBModel: TransactionRealmModel, productDBModel: ProductRealmModel) {
     guard let category = TransactionCategory(rawValue: transactionDBModel.categoryID),
       let currency = Currency(rawValue: transactionDBModel.currency) else {

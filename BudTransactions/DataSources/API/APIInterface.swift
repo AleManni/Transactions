@@ -10,15 +10,14 @@ import Foundation
 
 protocol API: DataSource {
   associatedtype NetworkModel: Codable
-  init(_ networkService: NetworkService)
-  var networkService: NetworkService { get set }
+  var networkService: NetworkService? { get set }
 }
 
 extension API {
 
   func getObject(request: APIRequest, completion: @escaping ((OperationResult<NetworkModel>) -> Void)) {
     if let urlRequest = request.urlRequest.valid {
-      networkService.handleRequest(urlRequest, completion: { networkCompletion in
+      networkService?.handleRequest(urlRequest, completion: { networkCompletion in
 
         switch networkCompletion {
         case .success(let json):

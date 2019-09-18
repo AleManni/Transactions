@@ -24,6 +24,13 @@ final class ProductionRepositories: BudRepositories {
                            database: TransactionsDatabase())
 }
 
+//TODO: Change to mock repo
+final class TestsRepositories: BudRepositories {
+  var transactionsRepository: TransactionsRepositoryInterface =
+    TransactionsRepository(api: TransactionsMockAPI(),
+                           database: TransactionsDatabase())
+}
+
 final class ModulesFactory {
 
   let repositories: BudRepositories

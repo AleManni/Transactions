@@ -12,7 +12,7 @@ import UIKit
 /**
  Spend categories as deducted by the provied data 
  */
-public enum TransactionCategory: Int {
+public enum TransactionCategory: Int, CaseIterable {
   case entertainment = 0
   case utilities = 1
   case restaurants = 5

@@ -10,4 +10,5 @@ abstract_target 'BudTransactionsCommonPods' do
 shared_pods
 target 'BudTransactions' 
 target 'BudTransactionsTests'
+target 'BudTransactionsUITests'
 end

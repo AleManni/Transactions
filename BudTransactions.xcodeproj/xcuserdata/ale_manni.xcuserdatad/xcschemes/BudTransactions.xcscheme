@@ -23,7 +23,7 @@
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Testing"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
@@ -35,6 +35,16 @@
                BlueprintIdentifier = "1D6FD5FF212607A7005D0ADF"
                BuildableName = "BudTransactionsTests.xctest"
                BlueprintName = "BudTransactionsTests"
+               ReferencedContainer = "container:BudTransactions.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1D0801C22332582A00C196B8"
+               BuildableName = "BudTransactionsUITests.xctest"
+               BlueprintName = "BudTransactionsUITests"
                ReferencedContainer = "container:BudTransactions.xcodeproj">
             </BuildableReference>
          </TestableReference>
