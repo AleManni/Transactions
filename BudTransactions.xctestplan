@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "FF07959A-84F3-446E-85D4-125F379FF083",
+      "name" : "Configuration 1",
+      "options" : {
+        "commandLineArgumentEntries" : [
+
+        ]
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:BudTransactions.xcodeproj",
+      "identifier" : "1D6FD5EB212607A5005D0ADF",
+      "name" : "BudTransactions"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:BudTransactions.xcodeproj",
+        "identifier" : "1D6FD5FF212607A7005D0ADF",
+        "name" : "BudTransactionsTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:BudTransactions.xcodeproj",
+        "identifier" : "1D0801C22332582A00C196B8",
+        "name" : "BudTransactionsUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

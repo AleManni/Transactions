@@ -15,11 +15,11 @@ final class ReachabilityService: AppService, ApplicationService {
   static let shared = ReachabilityService()
 
   var isReachable: Bool {
-    return reachability?.connection != .none
+    return reachability?.connection != Optional.none
   }
 
   lazy var reachability: Reachability? = {
-    if let reachability = Reachability() {
+    if let reachability = try? Reachability() {
       return reachability
     } else {
       return nil

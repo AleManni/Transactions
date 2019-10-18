@@ -806,7 +806,6 @@
 				1D0801C02332582A00C196B8 /* Frameworks */,
 				1D0801C12332582A00C196B8 /* Resources */,
 				F4FABA72B073D3D3C3B30577 /* [CP] Embed Pods Frameworks */,
-				0ADD4581215B5ADFF6890346 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -827,7 +826,6 @@
 				1D6FD5E9212607A5005D0ADF /* Frameworks */,
 				1D6FD5EA212607A5005D0ADF /* Resources */,
 				E77DD3F7ADBCFF4188A0CCF6 /* [CP] Embed Pods Frameworks */,
-				75F80685C819DECB3562F750 /* [CP] Copy Pods Resources */,
 				1D02F9FD212D602600A23CF9 /* ShellScript */,
 			);
 			buildRules = (
@@ -848,7 +846,6 @@
 				1D6FD5FD212607A7005D0ADF /* Frameworks */,
 				1D6FD5FE212607A7005D0ADF /* Resources */,
 				9BE99ED324048B6A818360EC /* [CP] Embed Pods Frameworks */,
-				EBFC217E43A826160C94725D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -932,25 +929,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0ADD4581215B5ADFF6890346 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactionsUITests/Pods-BudTransactionsCommonPods-BudTransactionsUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		1D02F9FD212D602600A23CF9 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1004,21 +982,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		75F80685C819DECB3562F750 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactions/Pods-BudTransactionsCommonPods-BudTransactions-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		99875FE38CD766E53DECCD56 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1042,21 +1005,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactionsTests/Pods-BudTransactionsCommonPods-BudTransactionsTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactionsTests/Pods-BudTransactionsCommonPods-BudTransactionsTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactionsTests/Pods-BudTransactionsCommonPods-BudTransactionsTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactionsTests/Pods-BudTransactionsCommonPods-BudTransactionsTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactionsTests/Pods-BudTransactionsCommonPods-BudTransactionsTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E77DD3F7ADBCFF4188A0CCF6 /* [CP] Embed Pods Frameworks */ = {
@@ -1064,36 +1022,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactions/Pods-BudTransactionsCommonPods-BudTransactions-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactions/Pods-BudTransactionsCommonPods-BudTransactions-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactions/Pods-BudTransactionsCommonPods-BudTransactions-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactions/Pods-BudTransactionsCommonPods-BudTransactions-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EBFC217E43A826160C94725D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactionsTests/Pods-BudTransactionsCommonPods-BudTransactionsTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactions/Pods-BudTransactionsCommonPods-BudTransactions-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F4FABA72B073D3D3C3B30577 /* [CP] Embed Pods Frameworks */ = {
@@ -1102,24 +1040,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactionsUITests/Pods-BudTransactionsCommonPods-BudTransactionsUITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactionsUITests/Pods-BudTransactionsCommonPods-BudTransactionsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactionsUITests/Pods-BudTransactionsCommonPods-BudTransactionsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactionsUITests/Pods-BudTransactionsCommonPods-BudTransactionsUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BudTransactionsCommonPods-BudTransactionsUITests/Pods-BudTransactionsCommonPods-BudTransactionsUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

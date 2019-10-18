@@ -1,20 +1,26 @@
 PODS:
-  - ReachabilitySwift (4.1.0)
-  - Realm (3.7.4):
-    - Realm/Headers (= 3.7.4)
-  - Realm/Headers (3.7.4)
-  - RealmSwift (3.7.4):
-    - Realm (= 3.7.4)
+  - ReachabilitySwift (5.0.0)
+  - Realm (3.19.1):
+    - Realm/Headers (= 3.19.1)
+  - Realm/Headers (3.19.1)
+  - RealmSwift (3.19.1):
+    - Realm (= 3.19.1)
 
 DEPENDENCIES:
   - ReachabilitySwift
   - RealmSwift
 
+SPEC REPOS:
+  trunk:
+    - ReachabilitySwift
+    - Realm
+    - RealmSwift
+
 SPEC CHECKSUMS:
-  ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
-  Realm: a469bb59e33f9926102ccaea4349822c53b9117e
-  RealmSwift: a45861b21c180f5cf0f122144b9759fa8dde3e9e
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  Realm: fb377747e694c7deb62d402400454134fe321bee
+  RealmSwift: 1302b0ab60f3105a2b214a735eeb0938607cf16b
 
-PODFILE CHECKSUM: d517f3a96bebe24d9053bb58ccc94b9652e42169
+PODFILE CHECKSUM: 917976e92c698f1bbfe25873030e197c910ebdc0
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.8.4

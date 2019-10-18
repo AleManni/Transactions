@@ -79,4 +79,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       $0.applicationWillTerminate?(application)
     }
   }
+  
+  
 }
